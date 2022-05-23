@@ -1,0 +1,68 @@
+ .content{
+     background-color: rgb(158, 205, 205);
+     background-image: url('../Images/b3.jpg');
+     width: 100%;
+     text-align: center;
+     padding-top: 50px;
+ }
+ .instruction{
+    color:#fff;
+ }
+
+ .content h1{
+     font-size: 65px;
+     font-weight: 600;
+     margin-bottom: 40px;
+ }
+ .content form{
+     padding: 10px;
+     border-radius: 8px;
+     display: flex;
+     justify-content: center;
+ }
+ .content form input{
+     min-width: 30%;
+     outline: none;
+     padding: 0 20px;
+     margin-right: 2px;
+     font-size: 18px;
+     border-radius: 6px;
+ }
+ .content form button{
+     background: #ff3d00;
+     color: #fff;
+     padding: 15px 40px;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+ }
+ .content form button:hover{
+     background: #88343e;
+ }
+ .category-list{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 40px;
+     margin-bottom: 15px;
+     cursor: pointer;
+ }
+ .category{
+     width: 80px;
+     height: 80px;
+     background: rgba(248, 248, 246, 0.934);
+     border-radius: 8px;
+     margin: 0 10px;
+     font-size: 12px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+ }
+ .category:hover{
+     background: rgba(110, 106, 105, 0.939);
+ }
+ .category img{
+     width: 40px;
+     padding-top: 15px;
+ }

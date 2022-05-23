@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Poppins:wght@400&display=swap');
+:root{
+    --index: 1;
+    --container_height: calc(320px * var(--index));
+    --card_width: calc(270px * var(--index));
+    --pic_container_height: calc(255px * var(--index));
+    --description_container_height: calc( 65px* var(--index));
+    --container_width: 1248px
+}
+.main{
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+.title{
+    /* background-color: blueviolet; */
+    height: 50px;
+    width: var(--container_width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.title span{
+    font-family: 'Mukta',sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+}
+.title button{
+    color: white;
+    border: none;
+    background-color: #494949;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 6px;
+}
+.title button:hover{
+    background-color: #36B2FA;
+    color: black;
+    cursor: pointer;
+}
+.main .mySwiper{
+    /* background-color: rgb(183, 186, 225); */
+    width: var(--container_width);
+    padding-top: 15px;
+    padding-bottom: 45px;
+}
+.card{
+    /* border: 1px solid rgb(236, 255, 22); */
+    width: var(--card_width);
+    height: var(--container_height);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.picContainer{
+    /* border: 1px solid red; */
+    height: var(--pic_container_height);
+}
+
+.picContainer img{
+    width: var(--card_width);
+    height: var(--pic_container_height);
+    object-fit: cover;
+}
+.description{
+    background-color: #F5F5FA;
+    height: var(--description_container_height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.description span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.slide:hover{
+    cursor: pointer;
+}
+
+@media(max-width: 1275px){
+    :root{
+        --container_width: 95%;
+    }
+}
+@media(max-width: 575px){
+    .slide{
+        display: flex;
+        justify-content: center;
+    }
+}

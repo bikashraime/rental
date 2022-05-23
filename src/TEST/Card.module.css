@@ -1,0 +1,131 @@
+:root{
+    --index: 1;
+    --container_height: calc(310px * var(--index));
+    --card_width: calc(270px * var(--index));
+    --pic_container_height: calc(255px * var(--index));
+    --description_container_height: calc( 55px* var(--index));
+    --container_width: 1248px
+}
+.main{
+    background-color: rgb(199, 197, 191);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+.title{
+    background-color: blueviolet;
+    height: 50px;
+    width: var(--container_width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.title span{
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+.title button{
+    color: white;
+    border: none;
+    background-color: #494949;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 6px;
+}
+.title button:hover{
+    background-color: #36B2FA;
+    color: black;
+    cursor: pointer;
+}
+.container{
+    border: 1px solid aquamarine;
+    background-color: aquamarine;
+    width: var(--container_width);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.card{
+    border: 1px solid red;
+    width: var(--card_width);
+    height: var(--container_height);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.picContainer{
+    /* border: 1px solid red; */
+    height: var(--pic_container_height);
+}
+.picContainer img{
+    width: var(--card_width);
+    height: var(--pic_container_height);
+    object-fit: cover;
+}
+.description{
+    background-color: #F5F5FA;
+    height: var(--description_container_height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.description span{
+    font-family: sans-serif;
+}
+@media(max-width: 1275px){
+    :root{
+        --container_width: 95%;
+    }
+}
+@media(max-width: 1175px){
+    :root{
+        --index: 0.9;
+    }
+}
+@media(max-width:1050px ){
+    :root{
+        --index: 0.8;
+    }
+}
+@media(max-width:950px ){
+    :root{
+        --index: 0.9;
+        --container_width: 85%;
+    }
+    #c4{
+        display: none;
+    }
+}
+
+@media(max-width:890px ){
+    :root{
+        --index: 1.1;
+        --container_width: 75%;
+    }
+    #c3{
+        display: none;
+    }
+}
+
+@media(max-width:810px ){
+    :root{
+        --index: 0.9;
+    }
+}
+@media(max-width:660px ){
+    :root{
+        --index: 0.8;
+    }
+}
+@media(max-width:590px ){
+    :root{
+        --index: 1.2;
+    }
+    .container{
+        justify-content: center;
+    }
+    #c2{
+        display: none;
+    }
+}
