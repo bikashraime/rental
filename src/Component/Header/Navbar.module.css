@@ -8,6 +8,11 @@
     background-color: var(--nav_color);
     color: white;
     font-family: sans-serif;
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 .insideMain{
     /* background-color: rgb(95, 212, 212); */

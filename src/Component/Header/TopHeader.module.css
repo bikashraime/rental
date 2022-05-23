@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
-    height: 52px;
+    /* height: 52px; */
     padding-right: 15px;
     display: none;
 }
@@ -25,6 +25,13 @@
     display: flex;
     align-items: center;
     gap: 30px;
+}
+
+.linkedtext {
+    font-size: 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
 }
 .login:hover, .signup:hover{
     cursor: pointer;
