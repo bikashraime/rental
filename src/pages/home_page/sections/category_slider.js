@@ -1,17 +1,21 @@
 import { useState } from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card, Container, Image } from "react-bootstrap";
 import { SwiperSlide } from "swiper/react";
 import { HomeSlider } from "../../../components/home_slider";
 
 const CategoryCard = (props) => {
-    return <SwiperSlide className="mx-3" >
-        <Card>
-            <div style={{ width: 300, height: 200 }}>
-                <img src={props.obj.catImage} height={200} width={300} />
-                {props.obj.cateName}
-            </div>
-        </Card>
-    </SwiperSlide>
+    return (
+        <Card class='category-card'  >
+            <a href="#">
+                <div >
+                    <Image className="cat-image" src={props.obj.catImage} fluid />
+                    <div className="overlay-category">
+                        {props.obj.cateName}
+                    </div>
+                </div>
+            </a>
+
+        </Card>);
 }
 
 export const CategorySilder = (props) => {
@@ -45,10 +49,8 @@ export const CategorySilder = (props) => {
     ]);
 
     return <HomeSlider title="Categories"
-        objects={categories}
-        child={(obj) =>
-            <CategoryCard obj={obj} />
-        }
+        itemCounts={categories.length}
+        builder={(index) => <CategoryCard obj={categories[index]} />}
     />
 
 }

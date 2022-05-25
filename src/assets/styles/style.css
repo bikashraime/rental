@@ -1,57 +1,127 @@
-.sticky-navbar{
+.sticky-navbar {
 
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  z-index: 999;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-.banner-bg{
+.banner-bg {
     /* background-image: url('../images//banner.jpeg'); */
-    background:linear-gradient(0deg, rgba(45, 45, 45, 0.6), rgba(45, 45, 45, 0.3)),url('../images//banner.jpeg');
+    background: linear-gradient(0deg, rgba(45, 45, 45, 0.3), rgba(45, 45, 45, 0.8)), url('../images//banner.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     background-color: black;
     aspect-ratio: 1280/600;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
-.banner-text{
+.banner-text {
     color: white;
     font-weight: 600;
     font-size: 4em;
     text-shadow: 0px 0px 10px #000000;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
-.searchContainer{
+
+.searchContainer {
     background-color: white;
     width: 60%;
     /* padding: 10px; */
-    border-radius: 6px;
-    border-color: #000000;
-    border-width: 2px;
-} 
-.search-padding{
+    border-radius: 10px;
+    border: 2px solid rgb(47, 46, 46);
+}
+
+.search-padding {
     padding: 15px 1.4rem !important;
 }
+
 .no-glow {
     border: none !important;
     box-shadow: none !important;
 }
-.no-glow :focus{
+
+.no-glow :focus {
     box-shadow: none !important;
     border: none !important;
 }
-.searchbutton :hover{
-    border-radius: 0  6px 6px 0;
-    background-color: rgb(156, 52, 52);
+
+.searchbutton :hover {
+    border-radius: 0 8px 8px 0;
+    background-color: rgba(156, 52, 52, 0.5);
     color: white;
 }
-.search-icon:hover{
-    color: white;
+
+
+.topbar-text {
+    font-size: 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
 }
-.searchbutton :focus{
+
+a.topbar-text:hover {
+    color: red;
+}
+
+a:hover>img {
+    filter: opacity(1) drop-shadow(0 0 0 red);
+}
+
+
+a.viewall-text {
+    font-size: 11px;
+    color: #000;
+}
+
+a.viewall-text:hover {
+    font-weight: 500;
+    color: red;
+}
+
+.overlay-category {
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 16px;
+    border-radius: 6px;
+    text-align: center;
+    vertical-align: text-bottom;
+
+    border: 5px solid rgba(0, 0, 0, 0);
+}
+
+.overlay-category:hover {
+    border: 5px solid red;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+}
+
+.category-card:hover {
+    border-radius: 15px;
+
+}
+
+.cat-image {
+    object-fit: cover;
+}
+
+.swiper-button-next:after {
+    padding: 20px;
+    background-color: white;
+    font-size: 30px;
+    width: 100px;
+    height: 100px;
+    line-height: 0.8;
+    right: -60px;
+    border-radius: 100px;
 
 }

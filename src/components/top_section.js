@@ -1,42 +1,37 @@
 
-// import login from '../Images/login.svg'
-// import signup from '../Images/signup.svg'
-// import phone from '../Images/phone.svg'
-// import email from '../Images/email.svg'
+import login from '../assets/svg/login.svg'
+import signup from '../assets/svg/signup.svg'
+import phone from '../assets/svg/phone.svg'
+import email from '../assets/svg/email.svg'
 import { Container, Col, Row } from 'react-bootstrap'
 
 export const TopSection = () => {
     return (
-        <div className='my-3'>
-            <Container >
-                <Row>
-                    <Col xs={6} className='px-3'>
-                        <div className='d-block'>
-                            {/* <img src={phone} className="mx-1 d-inline" alt="tel" style={{ width: 10 }} /> */}
-                            <span className='d-inline' >1234567890</span>
-                        </div>
-                        <div className='d-block'>
-                            {/* <img src={email} className="mx-1 d-inline" alt="mail" style={{ width: 10, marginLeft: 10 }} /> */}
-                            <span className='d-line'>abcdef@gmail.com</span>
-                        </div>
-                    </Col>
-                    <Col xs={6} className='px-3 float-right align-right text-right'>
-                        <a href="#">
+        <Container className='my-2 px-3'>
+            <section className='d-flex flex-row justify-content-between align-items-center' style={{ flexDirection: "row" }} >
 
-                            {/* <img src={login} height={13} style={{ marginRight: 6 }} /> */}
-                            <span >LOGIN</span>
+                <div >
+                    <div className='  d-inline topbar-text mx-1'>
+                        <img src={phone} className="mx-1 d-inline" alt="tel" style={{ width: 10 }} />
+                        <span className='d-inline' >1234567890</span>
+                    </div>
+                    <div className=' d-inline topbar-text mx-1'>
+                        <img src={email} className="mx-1 d-inline" alt="mail" style={{ width: 10, marginLeft: 10 }} />
+                        <span className='d-line'>abcdef@gmail.com</span>
+                    </div>
+                </div>
+                <div >
+                    <a className='topbar-text mx-1' href="#">
+                        <img src={login} height={13} style={{ marginRight: 6 }} />
+                        <span >LOGIN</span>
+                    </a>
+                    <a className='topbar-text mx-1' href="#">
+                        <img src={signup} height={13} style={{ marginRight: 6 }} />
+                        <span>SIGNUP</span>
+                    </a>
+                </div>
 
-                        </a>
-                        <a href="#">
-
-                            {/* <img src={signup} height={13} style={{ marginRight: 6 }} /> */}
-                            <span>SIGNUP</span>
-
-                        </a>
-
-                    </Col>
-                </Row>
-            </Container >
-        </div>
+            </section >
+        </Container >
     )
 }
