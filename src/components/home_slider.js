@@ -12,6 +12,9 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, Controller } from "swiper";
 import { Container, Row } from 'react-bootstrap';
 
+// icons
+import prev from '../assets/icons/prev.png';
+import next from '../assets/icons/next.png';
 
 export const HomeSlider = (props) => {
 
@@ -36,29 +39,26 @@ export const HomeSlider = (props) => {
                 <a class="text-decoration-none viewall-text" href="#"> View All</a>
             </div>
             <div style={{ height: 20 }} />
-            <div className='d-flex flex-row' >
-                <div className="d-inline-flex">
-                    <button onClick={() => controlledSwiper.slidePrev()}>Prev</button>
+            <div className='d-flex flex-row align-items-center' >
+                <div className="mx-3">
+                    <button className='btn btn-round btn-swiper' onClick={() => controlledSwiper.slidePrev()}>
+                        <img src={prev} height={30} />
+                    </button>
                 </div>
                 <Swiper
                     className="d-inline-flex"
-                    slidesPerView={4}
                     loop={true}
                     spaceBetween={20}
-                    height={200}
                     loopFillGroupWithBlank={true}
-                    pagination={{
-                        clickable: true
-                    }}
-                    // controller={{ control: controlledSwiper }}
+                    // pagination={true}
                     onSwiper={setControlledSwiper}
                     scrollbar={{ draggable: true }}
                     modules={[Pagination, Navigation, Controller]}
                     breakpoints={{
-                        140: {
-                            slidesPerView: 3,
+                        200: {
+                            slidesPerView: 1,
                         },
-                        575: {
+                        650: {
                             slidesPerView: 2,
                         },
                         860: {
@@ -71,8 +71,10 @@ export const HomeSlider = (props) => {
                 >
                     {slides}
                 </Swiper>
-                <div className="d-inline-flex">
-                    <button onClick={() => controlledSwiper.slideNext()}>Next</button>
+                <div className="mx-3">
+                    <button className='btn btn-round btn-swiper' onClick={() => controlledSwiper.slideNext()}>
+                        <img src={next} height={30} />
+                    </button>
                 </div>
             </div>
         </Container>

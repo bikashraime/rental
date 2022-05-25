@@ -9,6 +9,7 @@ import { SearchBanner } from '../../components/banner.js';
 import { TopSection } from '../../components/top_section.js';
 import { HomeSlider } from '../../components/home_slider.js';
 import { CategorySilder } from './sections/category_slider.js';
+import { RentalRoomSilder } from './sections/rental_rooms_slider.js';
 
 
 export const HomePage = () => {
@@ -18,6 +19,7 @@ export const HomePage = () => {
             <NavigationBar />
             <SearchBanner />
             <CategorySilder />
+            <RentalRoomSilder />
             {/* <Category title="Categories" />
             <Rental title='Rental rooms' />
             <Slider title='Apartments & Housing' />

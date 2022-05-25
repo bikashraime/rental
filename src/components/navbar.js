@@ -8,7 +8,7 @@ export const NavigationBar = () => {
             <Navbar className='sticky-navbar' sticky={true} collapseOnSelect expand="lg" variant="dark" style={{ backgroundColor: "#313539" }}>
                 <Container>
                     <Navbar.Brand href="#">
-                        <img src={logo} height={80} />
+                        <img src={logo} height={60} />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className=' flex-md-row-reverse'>
