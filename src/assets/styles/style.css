@@ -169,3 +169,30 @@ a.viewall-text:hover {
     font-size: 12px;
 
 }
+
+.footer-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+li.bottom-nab {
+    list-style: none
+}
+
+li>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li>a:hover {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-page-link {
+    border-left: #fff solid 2px;
+    padding-left: 20px;
+}
