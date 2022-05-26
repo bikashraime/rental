@@ -10,6 +10,8 @@ import { TopSection } from '../../components/top_section.js';
 import { HomeSlider } from '../../components/home_slider.js';
 import { CategorySilder } from './sections/category_slider.js';
 import { RentalRoomSilder } from './sections/rental_rooms_slider.js';
+import { ApartmentRoomSilder } from './sections/apartment_rooms_slider.js';
+import Footer from '../../components/footer.js';
 
 
 export const HomePage = () => {
@@ -20,14 +22,11 @@ export const HomePage = () => {
             <SearchBanner />
             <CategorySilder />
             <RentalRoomSilder />
-            {/* <Category title="Categories" />
-            <Rental title='Rental rooms' />
-            <Slider title='Apartments & Housing' />
-            <Slider title='Commercial & Business' />
-            <Slider title='Lands' /> */}
+            <ApartmentRoomSilder />
+
 
             <br /><br /><br />
-            {/* <Footer /> */}
+            <Footer />
 
 
         </>

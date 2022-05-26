@@ -6,25 +6,25 @@ import price from '../assets/icons/price.png';
 
 export const RentalCard = (props) => {
     return (
-        <a style={{ height: 160 }} href="#">
+        <a className="text-decoration-none" href="#">
             <div className="rental-card">
-                <Image className="cat-image" src={props.obj.image} height={160} />
-                <div className=" ">
-                    <span className="d-flex">
-                        <img src={building} width={10} />
-                        {props.obj.name}
+                <Image className="rental-image" src={props.obj.image} height={130} />
+                <div className="mx-2 my-2">
+                    <span className="d-block align-middle">
+                        <img src={building} width={10} height={10} />
+                        <span className="mx-2 rental-text">{props.obj.name}</span>
                     </span>
-                    <span className="d-flex">
-                        <img src={location} width={10} />
-                        {props.obj.location}
+                    <span className="d-block align-middle">
+                        <img src={location} width={10} height={10} />
+                        <span className="mx-2 rental-text">{props.obj.location}</span>
                     </span>
-                    <span className="d-flex">
-                        <img src={area} width={10} />
-                        {props.obj.area}
+                    <span className="d-block align-middle">
+                        <img src={area} width={10} height={10} />
+                        <span className="mx-2 rental-text">{props.obj.area}</span>
                     </span>
-                    <span className="d-flex">
-                        <img src={price} width={10} />
-                        {props.obj.price}
+                    <span className="d-block align-middle">
+                        <img src={price} width={10} height={10} />
+                        <span className="mx-2 rental-text">{props.obj.price}</span>
                     </span>
                 </div>
 

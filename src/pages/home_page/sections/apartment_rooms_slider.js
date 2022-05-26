@@ -5,7 +5,7 @@ import { HomeSlider } from "../../../components/home_slider";
 import { RentalCard } from "../../../components/rental_card";
 
 
-export const RentalRoomSilder = (props) => {
+export const ApartmentRoomSilder = (props) => {
 
     const [categories, setCaetgories] = useState([
         {
@@ -62,7 +62,7 @@ export const RentalRoomSilder = (props) => {
         },
     ]);
 
-    return <HomeSlider title="Rental rooms"
+    return <HomeSlider title="Apartments & rooms"
         itemCounts={categories.length}
         builder={(index) => <RentalCard obj={categories[index]} />}
     />
