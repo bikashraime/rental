@@ -12,6 +12,7 @@ import { CategorySilder } from './sections/category_slider.js';
 import { RentalRoomSilder } from './sections/rental_rooms_slider.js';
 import { ApartmentRoomSilder } from './sections/apartment_rooms_slider.js';
 import Footer from '../../components/footer.js';
+import { ContactUs } from '../../components/contact_us.js';
 
 
 export const HomePage = () => {
@@ -24,7 +25,7 @@ export const HomePage = () => {
             <RentalRoomSilder />
             <ApartmentRoomSilder />
 
-
+            <ContactUs />
             <br /><br /><br />
             <Footer />
 

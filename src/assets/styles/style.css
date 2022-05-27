@@ -196,3 +196,22 @@ li>a:hover {
     border-left: #fff solid 2px;
     padding-left: 20px;
 }
+
+
+.contact-bg {
+    /* background-image: url('../images//banner.jpeg'); */
+    background: linear-gradient(0deg, rgba(45, 45, 45, 0.3), rgba(45, 45, 45, 0.5)), url('../images//banner-1.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
+    height: 30%;
+    vertical-align: middle;
+}
+
+.contact-card {
+    background-color: #fff;
+    margin: 50px;
+    padding: 1.3em;
+}
