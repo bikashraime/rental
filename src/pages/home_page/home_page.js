@@ -13,20 +13,33 @@ import { RentalRoomSilder } from './sections/rental_rooms_slider.js';
 import { ApartmentRoomSilder } from './sections/apartment_rooms_slider.js';
 import Footer from '../../components/footer.js';
 import { ContactUs } from '../../components/contact_us.js';
+import { useEffect, useRef } from 'react';
 
 
 export const HomePage = () => {
+
+    const categoryRef = useRef(null);
+    const contactRef = useRef();
+
+
+
     return (
         <>
             <TopSection />
-            <NavigationBar />
+            <NavigationBar onNav={(idname) => {
+                if (idname == "categories") {
+                    categoryRef.current.scrollIntoView()
+                } else if (idname.contains("categories")) {
+                    categoryRef.current.scrollIntoView()
+
+                }
+            }} />
             <SearchBanner />
-            <CategorySilder />
+            <CategorySilder ref={categoryRef} />
             <RentalRoomSilder />
             <ApartmentRoomSilder />
 
             <ContactUs />
-            <br /><br /><br />
             <Footer />
 
 
