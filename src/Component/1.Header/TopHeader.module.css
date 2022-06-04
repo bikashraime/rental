@@ -1,4 +1,5 @@
-.minTopHeader{
+
+.minTopHeader {
     /* background-color: aquamarine; */
     align-items: center;
     justify-content: flex-end;
@@ -7,12 +8,14 @@
     padding-right: 15px;
     display: none;
 }
-.minTopHeader img:hover{
+
+.minTopHeader img:hover {
     width: 23px;
     border: 1px solid black;
     padding: 2px;
 }
-.insideMain{
+
+.insideMain {
     width: 1248px;
     /* background-color: beige; */
     margin: auto;
@@ -20,47 +23,67 @@
     justify-content: space-between;
     height: 52px;
 }
-.contact, .access{
+
+.contact,
+.access {
     /* background-color: bisque; */
     display: flex;
     align-items: center;
     gap: 30px;
 }
-.login:hover, .signup:hover{
+
+.login:hover,
+.signup:hover {
     cursor: pointer;
     color: rgb(111, 144, 197);
 }
-.minTopHeader img, .login img, .signup img, .phone img, .email img{
+
+.minTopHeader img,
+.login img,
+.signup img,
+.phone img,
+.email img {
     width: 18px;
     margin-right: 5px;
-    
+
 }
-#click{
+
+#click {
     display: none;
 }
-@media(max-width: 1300px){
-    .insideMain{
+
+@media(max-width: 1300px) {
+    .insideMain {
         width: 96%;
     }
 }
+
 @media (max-width: 784px) {
-    .insideMain{
+    .insideMain {
         justify-content: center;
         gap: 20px;
-        
+
     }
 }
-@media (max-width: 530px){
-    .insideMain{
+
+@media (max-width: 530px) {
+    .insideMain {
         display: none;
     }
-    .contact, .access{
+
+    .contact,
+    .access {
         display: block;
     }
-    .minTopHeader{
+
+    .minTopHeader {
         display: flex;
     }
-    .phone, .email, .login, .signup{
+
+    .phone,
+    .email,
+    .login,
+    .signup {
         border: 1px solid rgb(230, 227, 227);
         border-radius: 5px;
         height: 45px;
@@ -71,8 +94,10 @@
         align-items: center;
         justify-content: center;
     }
-    
-    #click:checked + div{
+
+    #click:checked+div {
         display: block;
+        position: absolute;
+        z-index: 3;
     }
 }

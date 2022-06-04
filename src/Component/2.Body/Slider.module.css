@@ -26,6 +26,9 @@
     font-family: 'Mukta',sans-serif;
     font-size: 38px;
     font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .title button{
     color: white;
@@ -52,6 +55,7 @@
     height: var(--slider_container_height);
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 1px 1px 5px rgb(136, 136, 136);
 }
 .picContainer{
     /* border: 1px solid red; */
@@ -80,14 +84,20 @@
 }
 .description span{
     font-family: 'Poppins',sans-serif;
-
 }
 .description div img{
     width: 12px;
     margin-right: 5px;
 }
+.description:hover{
+    background-color: rgb(101, 233, 222);
+}
+.slide{
+    transition: margin 0.2s ease !important;
+}
 .slide:hover{
     cursor: pointer;
+    margin-top: -5px;
 }
 
 @media(max-width: 1275px){
@@ -99,5 +109,10 @@
     .slide{
         display: flex;
         justify-content: center;
+    }
+}
+@media(max-width: 615px){
+    .title span{
+        font-size: 28px;
     }
 }

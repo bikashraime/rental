@@ -1,6 +1,11 @@
 .main{
-    background-color: #DADBF1 ;
-    height: 400px;
+    /* background-color: #DADBF1 ; */
+    background-image: url(./Body\ pictures/banner.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    background-attachment: fixed;
 }
 .titleContainer{
     /* background-color: azure; */
@@ -16,6 +21,7 @@
     font-size: 60px;
     font-weight: 400;
     font-family: sans-serif;
+    color: white;
 }
 .searchArea{
     width: 100%;

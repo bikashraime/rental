@@ -1,9 +1,9 @@
 import React from 'react'
-import css from './Card.module.css'
+import css from './CardContainer.module.css'
 import b3 from '../Component/Images/b3.jpg'
 import house from '../Component/Images/house.jpg'
 
-function Card(props) {
+function CardContainer(props) {
     return (
         <div className={css.main}>
             <div className={css.title}>
@@ -48,4 +48,4 @@ function Card(props) {
     )
 }
 
-export default Card
+export default CardContainer

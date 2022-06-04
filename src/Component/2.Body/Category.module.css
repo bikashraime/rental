@@ -52,6 +52,7 @@
     height: var(--container_height);
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 1px 1px 5px rgb(136, 136, 136);
 }
 .picContainer{
     /* border: 1px solid red; */
@@ -75,8 +76,12 @@
     font-size: 20px;
     text-align: center;
 }
+.slide{
+    transition: margin 0.2s ease !important;
+}
 .slide:hover{
     cursor: pointer;
+    margin-top: -5px;
 }
 
 @media(max-width: 1275px){
