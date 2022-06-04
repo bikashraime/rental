@@ -19,21 +19,24 @@
     position: absolute;
     bottom: 10%;
     font-size: 60px;
+<<<<<<< HEAD:src/Component/2.Body/SearchArea.module.css
     font-weight: 400;
     font-family: sans-serif;
     color: white;
+=======
+>>>>>>> f5db2806a4e54cba36ff8609e214ef04894aa418:src/Component/Body/SearchArea.module.css
 }
 .searchArea{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
+    /* width: 100%; */
+    /* height: 50%; */
+    /* display: flex; */
+    /* justify-content: center; */
 }
 .searchContainer{
-    width: 30%;
+    /* width: 30%;
     height: 55px;
     position: relative;
-    top: 5%;
+    top: 5%; */
 } 
 .searchIcon{
     width: 18px;
