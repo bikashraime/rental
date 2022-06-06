@@ -143,9 +143,9 @@ a.viewall-text:hover {
 .category-card {
     border-radius: 10px;
     height: 100%;
+    width: 100%;
 }
 
-.category-card:hover {}
 
 .rental-card {
     background-color: aliceblue;

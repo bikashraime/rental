@@ -20,7 +20,7 @@ export const HomeSlider = (props) => {
     var slides = [];
     for (let index = 0; index < props.itemCounts; index++) {
         slides.push(
-            <SwiperSlide className='d-flex'>
+            <SwiperSlide>
                 {props.builder(index)}
             </SwiperSlide>
         );

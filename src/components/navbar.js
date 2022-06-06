@@ -2,6 +2,9 @@ import React from 'react'
 import logo from '../assets/images/logo.png';
 import { Container, Image, Navbar, Nav } from 'react-bootstrap'
 
+import { BrowserRouter as Router, Link } from 'react-router-dom'
+
+
 export const NavigationBar = (props) => {
     return (
         <>
@@ -12,12 +15,14 @@ export const NavigationBar = (props) => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className=' flex-md-row-reverse'>
+
                         <Nav>
                             <Nav.Link href="#">Home</Nav.Link>
                             <Nav.Link onClick={() => { props.onNav("categories") }}>Categories</Nav.Link>
-                            <Nav.Link href="#about-us">About us</Nav.Link>
+                            <Link to='/about'>About us</Link>
                             <Nav.Link href="#contact">Contact</Nav.Link>
                         </Nav>
+
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
