@@ -1,5 +1,7 @@
 import React from 'react'
-import css from '../Component/Body/Slider.module.css'
+import css from '../Component/2.Body/Slider.module.css'
+
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -18,30 +20,30 @@ export const HomeSlider = (props) => {
                 <a class="text-decoration-none text-black" href="#"> View All</a>
             </div>
             <Swiper
-            // slidesPerView={4}
-            // loop={true}
-            // loopFillGroupWithBlank={true}
-            // pagination={{
-            //     clickable: true
-            // }}
-            // scrollbar={{ draggable: true }}
-            // navigation={true}
-            // modules={[Pagination, Navigation]}
-            // className={css.mySwiper}
-            // breakpoints={{
-            //     140: {
-            //         slidesPerView: 3,
-            //     },
-            //     575: {
-            //         slidesPerView: 2,
-            //     },
-            //     860: {
-            //         slidesPerView: 3,
-            //     },
-            //     1140: {
-            //         slidesPerView: 4,
-            //     }
-            // }}
+            slidesPerView={4}
+            loop={true}
+            loopFillGroupWithBlank={true}
+            pagination={{
+                clickable: true
+            }}
+            scrollbar={{ draggable: true }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className={css.mySwiper}
+            breakpoints={{
+                140: {
+                    slidesPerView: 3,
+                },
+                575: {
+                    slidesPerView: 2,
+                },
+                860: {
+                    slidesPerView: 3,
+                },
+                1140: {
+                    slidesPerView: 4,
+                }
+            }}
             >
                 {props.objects.map((obj) => {
                     return props.child(obj);

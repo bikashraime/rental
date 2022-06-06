@@ -1,5 +1,5 @@
 import React from 'react'
-import css from '../Component/Body/SearchArea.module.css'
+import css from '../Component/2.Body/SearchArea.module.css'
 import search from '../assets/svg/search.svg';
 import { Col, Container, Row } from 'react-bootstrap';
 
