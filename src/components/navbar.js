@@ -17,10 +17,10 @@ export const NavigationBar = (props) => {
                     <Navbar.Collapse id="responsive-navbar-nav" className=' flex-md-row-reverse'>
 
                         <Nav>
-                            <Nav.Link href="#">Home</Nav.Link>
-                            <Nav.Link onClick={() => { props.onNav("categories") }}>Categories</Nav.Link>
-                            <Link to='/about'>About us</Link>
-                            <Nav.Link href="#contact">Contact</Nav.Link>
+                            <Link className="nav-link" to='/'>Home</Link>
+                            <Link className="nav-link" to='/categories'>Categories</Link>
+                            <Link className="nav-link" to='/about'>About us</Link>
+                            <Link className="nav-link" to='/#contact'>Contact</Link>
                         </Nav>
 
                     </Navbar.Collapse>

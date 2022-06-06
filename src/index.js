@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { DetailPage } from './pages/detail_page/detail_page';
+import { NotFoundPage } from './pages/not_found_page/not_found_page';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,6 +15,7 @@ root.render(
       <Routes>
         < Route path="/" element={<App />} />
         < Route path="about" element={<DetailPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
