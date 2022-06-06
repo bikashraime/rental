@@ -1,9 +1,6 @@
 
 // import Footer from './Component/Footer/Footer.js';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import { Swiper, SwiperSlide } from "swiper/react";
 import { NavigationBar } from '../../components/navbar.js';
 import { SearchBanner } from '../../components/banner.js';
 import { TopSection } from '../../components/top_section.js';
@@ -14,7 +11,6 @@ import { ApartmentRoomSilder } from './sections/apartment_rooms_slider.js';
 import Footer from '../../components/footer.js';
 import { ContactUs } from '../../components/contact_us.js';
 import { useEffect, useRef } from 'react';
-
 
 
 export const HomePage = () => {
@@ -39,11 +35,8 @@ export const HomePage = () => {
             <CategorySilder ref={categoryRef} />
             <RentalRoomSilder />
             <ApartmentRoomSilder />
-
             <ContactUs />
             <Footer />
-
-
         </>
     );
 }

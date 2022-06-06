@@ -18,23 +18,7 @@ import { CategorySilder } from './pages/home_page/sections/category_slider.js';
 const App = () => {
 
   return (
-    <>
-      <TopSection />
-      <NavigationBar />
-
-      <SearchBanner />
-
-      <CategorySilder title="Categories" />
-
-      <HomeSlider title='Rental rooms' />
-      <HomeSlider title='Apartments & Housing' />
-      <HomeSlider title='Commercial & Business' />
-      <HomeSlider title='Lands' />
-      <br /><br /><br />
-      <Footer />
-
-
-    </>
+    <HomePage />
   );
 }
 

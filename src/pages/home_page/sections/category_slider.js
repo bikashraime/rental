@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Card, Container, Image } from "react-bootstrap";
-import { SwiperSlide } from "swiper/react";
+import { Image } from "react-bootstrap";
 import { HomeSlider } from "../../../components/home_slider";
 
 const CategoryCard = (props) => {
@@ -11,7 +10,6 @@ const CategoryCard = (props) => {
                 <div className="overlay-category align-self-center d-flex">
                     <span className="align-middle">{props.obj.cateName}</span>
                 </div>
-
             </div>
         </a >
     );

@@ -15,7 +15,7 @@ export const HomeSlider = (props) => {
     var slides = [];
     for (let index = 0; index < props.itemCounts; index++) {
         slides.push(
-            <SwiperSlide>
+            <SwiperSlide className='d-flex'>
                 {props.builder(index)}
             </SwiperSlide>
         );
@@ -23,7 +23,7 @@ export const HomeSlider = (props) => {
     const [controlledSwiper, setControlledSwiper] = useState(null);
     return (
         <Container >
-            <div style={{ height: 50 }} />
+            <div style={{ height: 50, width: "100%" }} />
             <div className="d-flex flex-row justify-content-between align-items-center">
                 <h2 className='d-inline'>{props.title}</h2>
                 <a class="text-decoration-none viewall-text" href="#"> View All</a>
