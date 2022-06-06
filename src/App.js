@@ -6,7 +6,7 @@ import Slider from './Component/2.Body/Slider.js';
 import Footer from './Component/3.Footer/Footer.js';
 import { Route, Routes, Link } from 'react-router-dom';
 import { HomePage } from './pages/home_page/home_page.js';
-
+import './assets/styles/style.css'
 
 const App = () => {
 

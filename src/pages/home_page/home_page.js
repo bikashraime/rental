@@ -9,23 +9,39 @@ import { SearchBanner } from '../../components/banner.js';
 import { TopSection } from '../../components/top_section.js';
 import { HomeSlider } from '../../components/home_slider.js';
 import { CategorySilder } from './sections/category_slider.js';
+import { RentalRoomSilder } from './sections/rental_rooms_slider.js';
+import { ApartmentRoomSilder } from './sections/apartment_rooms_slider.js';
+import Footer from '../../components/footer.js';
+import { ContactUs } from '../../components/contact_us.js';
+import { useEffect, useRef } from 'react';
+
 
 
 export const HomePage = () => {
+
+    const categoryRef = useRef(null);
+    const contactRef = useRef();
+
+
+
     return (
         <>
             <TopSection />
-            <NavigationBar />
-            <SearchBanner />
-            <CategorySilder />
-            {/* <Category title="Categories" />
-            <Rental title='Rental rooms' />
-            <Slider title='Apartments & Housing' />
-            <Slider title='Commercial & Business' />
-            <Slider title='Lands' /> */}
+            <NavigationBar onNav={(idname) => {
+                if (idname == "categories") {
+                    categoryRef.current.scrollIntoView()
+                } else if (idname.contains("categories")) {
+                    categoryRef.current.scrollIntoView()
 
-            <br /><br /><br />
-            {/* <Footer /> */}
+                }
+            }} />
+            <SearchBanner />
+            <CategorySilder ref={categoryRef} />
+            <RentalRoomSilder />
+            <ApartmentRoomSilder />
+
+            <ContactUs />
+            <Footer />
 
 
         </>
