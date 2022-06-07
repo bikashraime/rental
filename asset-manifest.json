@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/rental/static/css/main.eab6bca5.css",
-    "main.js": "/rental/static/js/main.f761d787.js",
+    "main.css": "/rental/static/css/main.81d04124.css",
+    "main.js": "/rental/static/js/main.d2e7bf36.js",
     "static/js/787.fda8ff77.chunk.js": "/rental/static/js/787.fda8ff77.chunk.js",
+    "static/media/house.jpg": "/rental/static/media/house.4435245a3de2beaf5d40.jpg",
+    "static/media/b2.jpg": "/rental/static/media/b2.a5a209b9c2a1c808c8d5.jpg",
     "static/media/b3.jpg": "/rental/static/media/b3.5a3bf96aaf0c6917b7ad.jpg",
-    "static/media/rental3.jpg": "/rental/static/media/rental3.d68c0380fa0edc838538.jpg",
-    "static/media/rental2.jpg": "/rental/static/media/rental2.efd888ae08088a90ba90.jpg",
-    "static/media/rental1.jpg": "/rental/static/media/rental1.8dd4f460a2eac57669e6.jpg",
+    "static/media/banner.jpeg": "/rental/static/media/banner.6ad42c2e3436ab0441c2.jpeg",
+    "static/media/background.jpg": "/rental/static/media/background.a9dd73c52ec3e65fdefe.jpg",
     "static/media/Rental room.jpg": "/rental/static/media/Rental room.f1223337830c0aded2fa.jpg",
     "static/media/companyLogo.png": "/rental/static/media/companyLogo.59c22fbf4e4596038b72.png",
+    "static/media/logo.png": "/rental/static/media/logo.59c22fbf4e4596038b72.png",
     "static/media/apartment.jpg": "/rental/static/media/apartment.82f7a4ffa5fed2bed41a.jpg",
     "static/media/market.jpeg": "/rental/static/media/market.6754054f98396ca05182.jpeg",
     "static/media/commercial.jpeg": "/rental/static/media/commercial.41c61793b599b7485c6d.jpeg",
@@ -16,16 +18,17 @@
     "static/media/login.svg": "/rental/static/media/login.69f877e7131f25db09d51bd04bb39d16.svg",
     "static/media/signup.svg": "/rental/static/media/signup.ad6ce8f4daad4b08bb430a8fee055fae.svg",
     "static/media/search.svg": "/rental/static/media/search.cd761af2e6d53d07ac6129e7f885fa95.svg",
+    "static/media/closeicon.svg": "/rental/static/media/closeicon.6837248f26b4746bca22dce7c606b744.svg",
     "static/media/bar.svg": "/rental/static/media/bar.4de0b64b468d9cdbdd41f4d490765099.svg",
     "static/media/phone.svg": "/rental/static/media/phone.d11a5673b368c47201f7dc8d86dc0719.svg",
     "static/media/email.svg": "/rental/static/media/email.dba533a0d3bd121023c13a25036858ed.svg",
     "static/media/location.svg": "/rental/static/media/location.994928ef06a51d299a5aa0249b17719a.svg",
-    "main.eab6bca5.css.map": "/rental/static/css/main.eab6bca5.css.map",
-    "main.f761d787.js.map": "/rental/static/js/main.f761d787.js.map",
+    "main.81d04124.css.map": "/rental/static/css/main.81d04124.css.map",
+    "main.d2e7bf36.js.map": "/rental/static/js/main.d2e7bf36.js.map",
     "787.fda8ff77.chunk.js.map": "/rental/static/js/787.fda8ff77.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eab6bca5.css",
-    "static/js/main.f761d787.js"
+    "static/css/main.81d04124.css",
+    "static/js/main.d2e7bf36.js"
   ]
 }
