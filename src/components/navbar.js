@@ -6,9 +6,10 @@ import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 
 export const NavigationBar = (props) => {
+
     return (
         <>
-            <Navbar className='sticky-navbar' sticky={true} collapseOnSelect expand="lg" variant="dark" style={{ backgroundColor: "#313539" }}>
+            <Navbar className='sticky-navbar' sticky='top' collapseOnSelect expand="lg" variant="dark" style={{ backgroundColor: "#313539" }}>
                 <Container>
                     <Navbar.Brand href="#">
                         <img src={logo} height={60} />
