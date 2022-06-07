@@ -3,10 +3,11 @@ import building from '../assets/icons/building.png';
 import location from '../assets/icons/location.png';
 import area from '../assets/icons/area.png';
 import price from '../assets/icons/price.png';
+import { Link } from "react-router-dom";
 
 export const RentalCard = (props) => {
     return (
-        <a className="text-decoration-none" href="#">
+        <Link className="text-decoration-none" to="/detail/4" >
             <div className="rental-card">
                 <Image className="rental-image" src={props.obj.image} height={130} />
                 <div className="mx-2 my-2">
@@ -29,6 +30,6 @@ export const RentalCard = (props) => {
                 </div>
 
             </div>
-        </a >
+        </Link>
     );
 }

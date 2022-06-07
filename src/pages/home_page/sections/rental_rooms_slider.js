@@ -4,6 +4,8 @@ import { SwiperSlide } from "swiper/react";
 import { HomeSlider } from "../../../components/home_slider";
 import { RentalCard } from "../../../components/rental_card";
 
+import { withRouter } from 'react-router-dom';
+
 
 export const RentalRoomSilder = (props) => {
 
@@ -64,7 +66,9 @@ export const RentalRoomSilder = (props) => {
 
     return <HomeSlider title="Rental rooms"
         itemCounts={categories.length}
-        builder={(index) => <RentalCard obj={categories[index]} />}
+        builder={(index) =>
+            <RentalCard obj={categories[index]} />
+        }
     />
 
 }

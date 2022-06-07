@@ -4,6 +4,7 @@ import signup from '../assets/svg/signup.svg'
 import phone from '../assets/svg/phone.svg'
 import email from '../assets/svg/email.svg'
 import { Container, Col, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 export const TopSection = () => {
     return (
@@ -25,10 +26,10 @@ export const TopSection = () => {
                         <img src={login} height={13} style={{ marginRight: 6 }} />
                         <span >LOGIN</span>
                     </a>
-                    <a className='topbar-text mx-1' href="#">
+                    <Link className='topbar-text mx-1' to="/signup">
                         <img src={signup} height={13} style={{ marginRight: 6 }} />
                         <span>SIGNUP</span>
-                    </a>
+                    </Link>
                 </div>
 
             </section >

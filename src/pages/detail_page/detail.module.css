@@ -1,40 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400&family=Poppins:ital,wght@0,100;1,300&display=swap');
-:root{
+
+:root {
     --detailPageELementMargin: 17px;
     /* 0 0 3px rgb(195, 194, 194) */
     --shadow: 0 0 3px rgb(195, 194, 194);
 }
-.main{
+
+.main {
     /* background-color: beige; */
     display: flex;
     justify-content: center;
 }
-.insideMain{
+
+.insideMain {
     /* background-color: aquamarine; */
     width: 1248px;
 }
-.titleArea{
+
+.titleArea {
     border-radius: 5px;
     box-shadow: var(--shadow);
     padding: 1rem;
     margin-bottom: var(--detailPageELementMargin);
 }
-.title{
+
+.title {
     font-size: 2.4rem;
     margin-bottom: 0.4rem;
-    font-family: 'Mukta', sans-serif;  
+    font-family: 'Mukta', sans-serif;
 }
-.location{
+
+.location {
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.location img{
+
+.location img {
     width: 0.8rem;
     margin-right: 0.6rem;
 }
-.imageArea{
+
+.imageArea {
     box-shadow: var(--shadow);
     margin-bottom: var(--detailPageELementMargin);
     display: grid;
@@ -42,100 +50,120 @@
     grid-auto-rows: 300px;
     gap: 10px;
 }
-.imageArea div{
+
+.imageArea div {
     cursor: pointer;
 }
-.imageArea div img{
+
+.imageArea div img {
     /* border: 1px solid red; */
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 @media (max-width: 1222px) {
-    .imageArea{
+    .imageArea {
         grid-template-columns: auto auto auto;
         grid-auto-rows: auto;
     }
 }
+
 @media (max-width: 840px) {
-    .imageArea{
+    .imageArea {
         grid-template-columns: auto auto;
     }
 }
-.grid1{
+
+.grid1 {
     grid-area: 1/ 1/ span 2 / span 2;
 }
-.overview{
+
+.overview {
     box-shadow: var(--shadow);
     border-radius: 5px;
     margin-bottom: var(--detailPageELementMargin);
     padding: 1rem;
 }
-.overviewTitle{
+
+.overviewTitle {
     font-size: 1.7rem;
     font-weight: 500;
     font-family: 'Mukta', sans-serif;
 }
-.overviewContainer{
+
+.overviewContainer {
     margin-top: 1rem;
     box-shadow: var(--shadow);
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
 }
-.overviewConatinerBox{
+
+.overviewConatinerBox {
     /* border: 1px solid red; */
     width: 50%;
 }
-.overviewConatinerBox div{
+
+.overviewConatinerBox div {
     margin-bottom: 1rem;
 
 }
-.overviewContainer #parameter{
+
+.overviewContainer #parameter {
     font-weight: 500;
 }
-.propertyDetail{
+
+.propertyDetail {
     box-shadow: var(--shadow);
     border-radius: 5px;
     margin-bottom: var(--detailPageELementMargin);
     padding: 1rem;
 }
-.propertyDetailTitle{
+
+.propertyDetailTitle {
     font-size: 1.7rem;
     font-weight: 500;
     font-family: 'Mukta', sans-serif;
 }
-.propertyDetailContainer{
+
+.propertyDetailContainer {
     margin-top: 1rem;
     box-shadow: var(--shadow);
     padding: 1rem 0;
 }
-.ownerInfo{
+
+.ownerInfo {
     box-shadow: var(--shadow);
     border-radius: 5px;
     margin-bottom: var(--detailPageELementMargin);
     padding: 1rem;
 }
-.ownerInfoTitle{
+
+.ownerInfoTitle {
     font-size: 1.7rem;
     font-weight: 500;
     font-family: 'Mukta', sans-serif;
 }
-.ownerInfoContainer{
+
+.ownerInfoContainer {
     margin-top: 1rem;
     box-shadow: var(--shadow);
     padding: 1rem 0;
 }
-.ownerInfoContainer div{
+
+.ownerInfoContainer div {
     margin-bottom: 1rem;
 }
-.ownerInfoContainer #ownerParameter{
+
+.ownerInfoContainer #ownerParameter {
     font-weight: 600;
 }
 
-.lightbox{
+.lightbox {
     position: fixed;
     margin-top: 0;
+    z-index: 9999;
     top: 0;
     left: 0;
     width: 100%;
@@ -146,22 +174,26 @@
     background-color: rgba(0, 0, 0, 0.6);
     transform: scale(1);
 }
-.lightbox2{
+
+.lightbox2 {
     display: none;
 }
-.lightbox img{
+
+.lightbox img {
     max-width: 100%;
     max-height: 100%;
-    object-fit:contain;
+    object-fit: contain;
 }
+
 /* fill contain cover none scale-down */
-.closeSymbol{
+.closeSymbol {
     width: 15px;
     position: fixed;
     right: 10px;
     top: 10px;
     filter: invert(1);
 }
-.closeSymbol:hover{
+
+.closeSymbol:hover {
     cursor: pointer;
 }

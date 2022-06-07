@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import css from './DetailPage.module.css'
-import location from './location.svg'
+import css from './detail.module.css'
 
-import closeicon from './closeicon.svg'
-import house from './house.jpg'
-import b2 from './b2.jpg'
-import b3 from './b3.jpg'
-import background from './background.jpg'
+import location from './pictures/location.svg'
+import closeicon from './pictures/closeicon.svg'
+import house from './pictures/house.jpg'
+import b2 from './pictures/b2.jpg'
+import b3 from './pictures/b3.jpg'
+import background from './pictures/background.jpg'
 
 
 function DetailPage() {

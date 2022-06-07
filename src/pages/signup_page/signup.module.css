@@ -1,0 +1,72 @@
+:root{
+    --form_background_color: #24313C;
+}
+.form{
+    /* border: 1px solid green; */
+    margin-top: 50px; margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    border: 2px solid black;
+    padding: 30px;
+    width: 600px;
+    background-color: var(--form_background_color);
+    border-radius: 10px;
+}
+.buttonArea{
+    /* border: 1px solid green; */
+}
+.button1{
+    width: 50%;
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: #1AB188;
+    border: none;
+    color: white;
+}
+.button1:hover{
+    background-color: #179B77;
+}
+.button2{
+    width: 50%;
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: #435359;
+    border: none;
+    color: white;
+}
+.button2:hover{
+    background-color: #677276;
+}
+
+.title{
+    margin-top: 25px;
+    /* border: 1px solid white; */
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+.name input, .email input, .password input, .newpassword input{
+    margin-top: 25px;
+    width: 100%;
+    font-size: 20px;
+    padding: 8px;
+    background-color: var(--form_background_color);
+    color: white;
+    border: 1px solid white;
+}
+.getStarted{
+    width: 100%;
+    margin-top: 25px;
+    font-size: 2rem;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #1AB188;
+    border: none;
+}
+.getStarted:hover{
+    background-color: #179B77;
+}
