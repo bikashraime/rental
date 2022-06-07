@@ -12,6 +12,8 @@ import Footer from '../../components/footer.js';
 import { ContactUs } from '../../components/contact_us.js';
 import { useEffect, useRef } from 'react';
 
+import MetaTags from 'react-meta-tags';
+
 
 export const HomePage = () => {
 
@@ -22,6 +24,12 @@ export const HomePage = () => {
 
     return (
         <>
+            <MetaTags>
+                <title>Home</title>
+                <meta name="description" content="We are here to help" />
+                <meta property="og:title" content="Subha Rents" />
+                <meta property="og:image" content="../../assets/images/banner.jpeg" />
+            </MetaTags>
             <TopSection />
             <NavigationBar onNav={(idname) => {
                 if (idname == "categories") {
