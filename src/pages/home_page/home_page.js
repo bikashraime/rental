@@ -1,6 +1,3 @@
-
-// import Footer from './Component/Footer/Footer.js';
-
 import { NavigationBar } from '../../components/navbar.js';
 import { SearchBanner } from '../../components/banner.js';
 import { TopSection } from '../../components/top_section.js';
