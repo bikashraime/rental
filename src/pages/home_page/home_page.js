@@ -13,16 +13,14 @@ import { ContactUs } from '../../components/contact_us.js';
 import { useEffect, useRef } from 'react';
 
 
-export const HomePage = () => {
+const HomePage = () => {
 
     const categoryRef = useRef(null);
     const contactRef = useRef();
 
-
-
     return (
         <>
-            <TopSection />
+            {/* <TopSection />
             <NavigationBar onNav={(idname) => {
                 if (idname == "categories") {
                     categoryRef.current.scrollIntoView()
@@ -30,13 +28,15 @@ export const HomePage = () => {
                     categoryRef.current.scrollIntoView()
 
                 }
-            }} />
+            }} /> */}
             <SearchBanner />
             <CategorySilder ref={categoryRef} />
             <RentalRoomSilder />
             <ApartmentRoomSilder />
             <ContactUs />
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }
+
+export default HomePage
