@@ -12,6 +12,7 @@ import DetailPage from './pages/detail_page/detail_page.js';
 import { useEffect, useRef } from 'react';
 import Signup from './pages/signup_page/signup.js';
 import { NotFoundPage } from './pages/not_found_page/not_found_page.js';
+import CategoryPage from './pages/category_page/category_page.js';
 
 const App = () => {
   const categoryRef = useRef(null);
@@ -37,6 +38,10 @@ const App = () => {
           <Route exact path="/signup" element={<Signup />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+
+        <CategoryPage/>
+
+        
         <Footer />
       </BrowserRouter>
     </>

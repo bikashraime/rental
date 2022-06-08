@@ -1,4 +1,3 @@
-
 import login from '../assets/svg/login.svg'
 import signup from '../assets/svg/signup.svg'
 import phone from '../assets/svg/phone.svg'
