@@ -7,12 +7,13 @@ import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 export const NavigationBar = (props) => {
 
+
     return (
         <>
             <Navbar className='sticky-navbar' sticky='top' collapseOnSelect expand="lg" variant="dark" style={{ backgroundColor: "#313539" }}>
                 <Container>
                     <Navbar.Brand href="#">
-                        <img src={logo} height={60} />
+                        <Link to='/'><img src={logo} height={60} /></Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className=' flex-md-row-reverse'>
@@ -20,8 +21,8 @@ export const NavigationBar = (props) => {
                         <Nav>
                             <Link className="nav-link" to='/'>Home</Link>
                             <Link className="nav-link" to='/categories'>Categories</Link>
-                            <Link className="nav-link" to='/about'>About us</Link>
-                            <Link className="nav-link" to='/#contact'>Contact</Link>
+                            <Link className="nav-link" to='*'>About us</Link>
+                            <Link className="nav-link" to='*'>Contact</Link>
                         </Nav>
 
                     </Navbar.Collapse>

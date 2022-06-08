@@ -65,6 +65,7 @@ export const ApartmentRoomSilder = (props) => {
     return <HomeSlider title="Apartments & rooms"
         itemCounts={categories.length}
         builder={(index) => <RentalCard obj={categories[index]} />}
+        going='*'
     />
 
 }

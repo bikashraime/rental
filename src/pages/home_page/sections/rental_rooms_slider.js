@@ -69,6 +69,7 @@ export const RentalRoomSilder = (props) => {
         builder={(index) =>
             <RentalCard obj={categories[index]} />
         }
+        going='*'
     />
 
 }

@@ -4,6 +4,7 @@ import logo from '../assets/images/logo.png';
 import email from '../assets/icons/email.png';
 import phone from '../assets/icons/phone.png';
 import location from '../assets/icons/locationpoint.png';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -21,16 +22,16 @@ function Footer() {
                                     <div className='footer-title'>QUICK LINK</div>
                                     <div className='footer-page-link'>
                                         <li className='bottom-nab'>
-                                            <a href=""><span>Home</span></a>
+                                            <Link to='/'><span>Home</span></Link>
                                         </li>
                                         <li className='bottom-nab'>
-                                            <a href=""><span>Categories</span></a>
+                                            <Link to='/categories'><span>Categories</span></Link>
                                         </li>
                                         <li className='bottom-nab'>
-                                            <a href=""><span>About us</span></a>
+                                            <Link to='*'><span>About us</span></Link>
                                         </li>
                                         <li className='bottom-nab'>
-                                            <a href=""><span>Contact us</span></a>
+                                            <Link to='*' ><span>Contact us</span></Link>
                                         </li>
                                     </div>
 
