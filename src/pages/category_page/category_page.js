@@ -1,22 +1,36 @@
+import React from 'react'
 import { useState } from "react";
-import { Image } from "react-bootstrap";
-import { HomeSlider } from "../../../components/home_slider";
+import './category_page.css'
+import { Image, Card, Button, Container, Row, Col } from "react-bootstrap";
 
 const CategoryCard = (props) => {
+    const styles = {
+        card: {
+            borderRadius: '10px',
+            width: '18rem',
+            overflow: 'hidden',
+            boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)'
+        },
+        image: {
+            height: "250px",
+        },
+        title: {
+            marginTop: '1rem'
+        }
+    }
+
     return (
-        <a style={{ height: 160 }} href="#">
-            <div className="category-card">
-                <Image className="cat-image" src={props.obj.catImage} height={160} />
-                <div className="overlay-category align-self-center d-flex">
-                    <span className="align-middle">{props.obj.cateName}</span>
-                </div>
-            </div>
-        </a >
-    );
+        <Card className='category-page-card'>
+            <Card.Img variant="top" src={props.obj.catImage} style={styles.image} />
+            <Card.Body>
+                <Card.Title>{props.obj.cateName}</Card.Title>
+                <Button variant="primary" style={styles.title}>View All</Button>
+            </Card.Body>
+        </Card>
+    )
 }
 
-export const CategorySilder = (props) => {
-
+const CategoryPage = () => {
     const [categories, setCaetgories] = useState([
         {
             catImage: "https://cdn.redshift.autodesk.com/2018/08/future-of-buildings-header.jpg",
@@ -44,11 +58,18 @@ export const CategorySilder = (props) => {
             cateName: "Park"
         },
     ]);
-
-    return <HomeSlider title="Categories"
-        itemCounts={categories.length}
-        goto="/categories"
-        builder={(index) => <CategoryCard obj={categories[index]} />}
-    />
-
+    return (
+        <div className='category-page'>
+            <Container className="category-page-container">
+                <CategoryCard obj={categories[0]} />
+                <CategoryCard obj={categories[1]} />
+                <CategoryCard obj={categories[2]} />
+                <CategoryCard obj={categories[3]} />
+                <CategoryCard obj={categories[4]} />
+            </Container>
+            
+        </div>
+    )
 }
+
+export default CategoryPage

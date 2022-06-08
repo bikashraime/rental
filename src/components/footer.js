@@ -4,9 +4,6 @@ import logo from '../assets/images/logo.png';
 import email from '../assets/icons/email.png';
 import phone from '../assets/icons/phone.png';
 import location from '../assets/icons/locationpoint.png';
-// import phone from '../Images/phone.svg'
-// import email from '../Images/email.svg'
-// import companyLogo from './Footer images/companyLogo.png'
 
 function Footer() {
     return (

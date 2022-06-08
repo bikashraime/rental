@@ -15,6 +15,7 @@ import { Container, Row } from 'react-bootstrap';
 // icons
 import prev from '../assets/icons/prev.png';
 import next from '../assets/icons/next.png';
+import { Link } from 'react-router-dom';
 
 export const HomeSlider = (props) => {
     var slides = [];
@@ -31,7 +32,9 @@ export const HomeSlider = (props) => {
             <div style={{ height: 50, width: "100%" }} />
             <div className="d-flex flex-row justify-content-between align-items-center">
                 <h2 className='d-inline'>{props.title}</h2>
-                <a class="text-decoration-none viewall-text" href="#"> View All</a>
+                <Link to={props.goto} class="text-decoration-none viewall-text" >
+                    View All
+                </Link>
             </div>
             <div style={{ height: 20 }} />
             <div className='d-flex flex-row align-items-center' >

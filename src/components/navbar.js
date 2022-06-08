@@ -3,6 +3,8 @@ import logo from '../assets/images/logo.png';
 import { Container, Image, Navbar, Nav } from 'react-bootstrap'
 
 import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
+
 
 
 export const NavigationBar = (props) => {
@@ -21,7 +23,7 @@ export const NavigationBar = (props) => {
                             <Link className="nav-link" to='/'>Home</Link>
                             <Link className="nav-link" to='/categories'>Categories</Link>
                             <Link className="nav-link" to='/about'>About us</Link>
-                            <Link className="nav-link" to='/#contact'>Contact</Link>
+                            <HashLink className="nav-link" to='/#contact'>Contact</HashLink>
                         </Nav>
 
                     </Navbar.Collapse>
