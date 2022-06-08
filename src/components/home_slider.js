@@ -26,6 +26,8 @@ export const HomeSlider = (props) => {
             </SwiperSlide>
         );
     }
+    console.log(props.title)
+    console.log(props.going)
     const [controlledSwiper, setControlledSwiper] = useState(null);
     return (
         <Container >

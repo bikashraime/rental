@@ -9,12 +9,13 @@ import { HashLink } from 'react-router-hash-link';
 
 export const NavigationBar = (props) => {
 
+
     return (
         <>
             <Navbar className='sticky-navbar' sticky='top' collapseOnSelect expand="lg" variant="dark" style={{ backgroundColor: "#313539" }}>
                 <Container>
                     <Navbar.Brand href="#">
-                        <img src={logo} height={60} />
+                        <Link to='/'><img src={logo} height={60} /></Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className=' flex-md-row-reverse'>

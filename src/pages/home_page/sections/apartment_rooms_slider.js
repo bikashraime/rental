@@ -66,6 +66,7 @@ export const ApartmentRoomSilder = (props) => {
         itemCounts={categories.length}
         goto="/apartments&rooms/viewall/"
         builder={(index) => <RentalCard obj={categories[index]} />}
+        going='*'
     />
 
 }

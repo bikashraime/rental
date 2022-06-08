@@ -45,7 +45,8 @@ export const CategorySilder = (props) => {
         },
     ]);
 
-    return <HomeSlider title="Categories"
+    return <HomeSlider
+        title="Categories"
         itemCounts={categories.length}
         goto="/categories"
         builder={(index) => <CategoryCard obj={categories[index]} />}

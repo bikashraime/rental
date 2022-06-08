@@ -40,8 +40,8 @@ function LoginForm(props) {
     )
 }
 
-function Signup() {
-    const [click, setClick] = useState(true)
+function Signup(props) {
+    const [click, setClick] = useState(props.start)
 
     return (
         <div className={css.form}>

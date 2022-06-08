@@ -21,10 +21,10 @@ export const TopSection = () => {
                     </div>
                 </div>
                 <div >
-                    <a className='topbar-text mx-1' href="#">
+                    <Link className='topbar-text mx-1' to="/login">
                         <img src={login} height={13} style={{ marginRight: 6 }} />
                         <span >LOGIN</span>
-                    </a>
+                    </Link>
                     <Link className='topbar-text mx-1' to="/signup">
                         <img src={signup} height={13} style={{ marginRight: 6 }} />
                         <span>SIGNUP</span>
