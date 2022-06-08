@@ -24,7 +24,7 @@ export const NavigationBar = (props) => {
                             <Link className="nav-link" to='/'>Home</Link>
                             <Link className="nav-link" to='/categories'>Categories</Link>
                             <Link className="nav-link" to='/about'>About us</Link>
-                            <HashLink className="nav-link" to='/#contact'>Contact</HashLink>
+                            <HashLink className="nav-link" to='/#contact'>Contact us</HashLink>
                         </Nav>
 
                     </Navbar.Collapse>
