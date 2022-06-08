@@ -14,16 +14,16 @@ function DetailPage() {
     const [lightbox, setLightbox] = useState(false);
     const [currentImg, setCurrentImg] = useState('');
 
-    const giveImg = (img) =>{
+    const giveImg = (img) => {
         setCurrentImg(img);
         setLightbox(true);
     }
 
     return (
         <>
-            <div className={lightbox? css.lightbox : css.lightbox2}>
+            <div className={lightbox ? css.lightbox : css.lightbox2}>
                 <img src={currentImg} alt='current image' />
-                <img src={closeicon} className={css.closeSymbol} onClick={()=>setLightbox(false)}/> 
+                <img src={closeicon} className={css.closeSymbol} onClick={() => setLightbox(false)} />
             </div>
             <div className={css.main}>
                 <div className={css.insideMain}>
@@ -40,11 +40,11 @@ function DetailPage() {
                         </div>
                     </div>
                     <div className={css.imageArea}>
-                        <div className={css.grid1}><img src={house} alt="house" onClick={()=> giveImg(house)}/></div>
-                        <div><img src={house} onClick={()=> giveImg(house)}  /></div>
-                        <div><img src={b2} onClick={()=> giveImg(b2)} /></div>
-                        <div><img src={b3} onClick={()=> giveImg(b3)}/></div>
-                        <div><img src={background} onClick={()=> giveImg(background)}/></div>
+                        <div className={css.grid1}><img src={house} alt="house" onClick={() => giveImg(house)} /></div>
+                        <div><img src={house} onClick={() => giveImg(house)} /></div>
+                        <div><img src={b2} onClick={() => giveImg(b2)} /></div>
+                        <div><img src={b3} onClick={() => giveImg(b3)} /></div>
+                        <div><img src={background} onClick={() => giveImg(background)} /></div>
                     </div>
                     <div className={css.overview}>
                         <span className={css.overviewTitle}>Overview</span>

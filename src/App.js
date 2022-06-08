@@ -21,18 +21,10 @@ const App = () => {
     <>
       <BrowserRouter >
         <TopSection />
-        <NavigationBar onNav={(idname) => {
-          if (idname == "categories") {
-            categoryRef.current.scrollIntoView()
-          } else if (idname.contains("categories")) {
-            categoryRef.current.scrollIntoView()
-
-          }
-        }} />
+        <NavigationBar />
 
         <Routes>
           <Route path="/" element={<HomePage />} />
-
           <Route exact path="/detail/:id/" element={<DetailPage />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route path="*" element={<NotFoundPage />} />
