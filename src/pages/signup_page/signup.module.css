@@ -24,6 +24,7 @@
     background-color: #1AB188;
     border: none;
     color: white;
+    border-radius: 5px;
 }
 .button1:hover{
     background-color: #179B77;
@@ -35,6 +36,7 @@
     background-color: #435359;
     border: none;
     color: white;
+    border-radius: 5px;
 }
 .button2:hover{
     background-color: #677276;
@@ -66,6 +68,7 @@
     color: white;
     background-color: #1AB188;
     border: none;
+    border-radius: 5px;
 }
 .getStarted:hover{
     background-color: #179B77;
