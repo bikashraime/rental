@@ -298,9 +298,17 @@ li>a:hover {
 .scrollToTop {
     background-color: var(--background-color);
     border-radius: 100px;
-    width: 80px;
-    height: 80px;
-    position: absolute;
-
-    right: 30px;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    padding: 20px;
+    right: 40px;
+    bottom: 40px;
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    transition: opacity 1s ease-in-out;
+    box-shadow: 0 0px 5px 0 #fff;
+    border: none;
+    outline: none;
 }
