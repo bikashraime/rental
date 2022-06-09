@@ -1,4 +1,4 @@
-import { Route, Routes, Link, BrowserRouter, NavLink } from 'react-router-dom';
+import { Route, Routes, Link, BrowserRouter, useLocation } from 'react-router-dom';
 import { HomePage } from './pages/home_page/home_page.js';
 import './assets/styles/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,53 +14,48 @@ import Signup from './pages/signup_page/signup.js';
 import { NotFoundPage } from './pages/not_found_page/not_found_page.js';
 import CategoryPage from './pages/category_page/category_page.js';
 import { ViewAllPage } from './pages/view_all_page.js';
+import ScrollToTop from 'react-scroll-to-top';
+
+
+function ScrollTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 
 
 const App = () => {
-  const categoryRef = useRef(null);
-
-  // const navLinkStyles = ({isActive}) => {
-  //   return{
-  //     fontWeight: isActive? 'bold' : 'normal',
-  //     textDecoration: isActive? 'none' : 'underline',
-  //   }
-  // }
-
 
   return (
     <>
+      <BrowserRouter>
         <TopSection />
         <NavigationBar />
+        <ScrollTop />
 
-        <Routes>
+        <Routes >
           <Route path="/" element={<HomePage />} />
           <Route exact path="/detail/:id/" element={<DetailPage />} />
           <Route exact path="/categories" element={<CategoryPage />} />
           <Route exact path="/signup" element={<Signup start={true} />} />
-          <Route exact path="/login" element={<Signup start={false}/>} />
+          <Route exact path="/login" element={<Signup start={false} />} />
           <Route exact path="/:pagename/viewall/" element={<ViewAllPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
 
+        <ScrollToTop className="scrollToTop" smooth
+          color='#fff'
 
-        <Footer/>
+        />
 
-        
-        {/* Learning */}
+        <Footer />
 
-
-
-
-
-        {/* <NavLink style={navLinkStyles} to='/'>Home</NavLink>
-        <NavLink style={navLinkStyles} to='signup'>Signup</NavLink>
-        <NavLink style={navLinkStyles} to='category'>Category</NavLink>
-
-        <Routes>
-          <Route path='/' element={<DetailPage/>}/>
-          <Route path='signup' element={<Signup start={true}/>} />
-          <Route path='category' element={<CategoryPage/>}/>
-        </Routes> */}
+      </BrowserRouter>
     </>
   );
 }
