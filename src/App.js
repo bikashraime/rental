@@ -17,25 +17,32 @@ import { ViewAllPage } from './pages/view_all_page.js';
 import ScrollToTop from 'react-scroll-to-top';
 
 
+function ScrollTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+
 const App = () => {
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [location]);
-
 
   return (
     <>
       <BrowserRouter >
         <TopSection />
         <NavigationBar />
+        <ScrollTop />
 
         <Routes >
           <Route path="/" element={<HomePage />} />
           <Route exact path="/detail/:id/" element={<DetailPage />} />
           <Route exact path="/categories" element={<CategoryPage />} />
           <Route exact path="/signup" element={<Signup start={true} />} />
-          <Route exact path="/login" element={<Signup start={false}/>} />
+          <Route exact path="/login" element={<Signup start={false} />} />
           <Route exact path="/:pagename/viewall/" element={<ViewAllPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
