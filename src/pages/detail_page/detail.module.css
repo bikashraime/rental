@@ -4,6 +4,10 @@
     --detailPageELementMargin: 17px;
     /* 0 0 3px rgb(195, 194, 194) */
     --shadow: 0 0 3px rgb(195, 194, 194);
+
+    --background-color: #313539;
+    --shadow-color: #1e90ff;
+    --hover-color: rgba(0, 0, 0, 0.2);
 }
 
 .main {
@@ -187,10 +191,8 @@
 
 /* fill contain cover none scale-down */
 .closeSymbol {
-    width: 15px;
-    position: fixed;
-    right: 10px;
-    top: 10px;
+    width: 25px;
+    height: 25px;
     filter: invert(1);
 }
 

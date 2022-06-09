@@ -22,8 +22,12 @@ function DetailPage() {
     return (
         <div className='animated slideUp'>
             <div className={lightbox ? css.lightbox : css.lightbox2}>
-                <img src={currentImg} alt='current image' />
-                <img src={closeicon} className={css.closeSymbol} onClick={() => setLightbox(false)} />
+                <div className='animated fadeIn'>
+                    <img src={currentImg} alt='current image' />
+                    <div className='closeBtn' onClick={() => setLightbox(false)} >
+                        <img src={closeicon} className={css.closeSymbol} />
+                    </div>
+                </div>
             </div>
             <div className={css.main}>
                 <div className={css.insideMain}>
