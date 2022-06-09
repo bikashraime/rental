@@ -9,12 +9,12 @@ import { ContactUs } from '../../components/contact_us.js';
 
 export const HomePage = () => {
     return (
-        <>
+        <div className='animated fadeIn'>
             <SearchBanner />
             <CategorySilder />
             <RentalRoomSilder />
             <ApartmentRoomSilder />
             <ContactUs />
-        </>
+        </div>
     );
 }

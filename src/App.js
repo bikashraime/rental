@@ -1,4 +1,4 @@
-import { Route, Routes, Link, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, Link, BrowserRouter, useLocation } from 'react-router-dom';
 import { HomePage } from './pages/home_page/home_page.js';
 import './assets/styles/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,9 +14,14 @@ import Signup from './pages/signup_page/signup.js';
 import { NotFoundPage } from './pages/not_found_page/not_found_page.js';
 import CategoryPage from './pages/category_page/category_page.js';
 import { ViewAllPage } from './pages/view_all_page.js';
+import ScrollToTop from 'react-scroll-to-top';
+
 
 const App = () => {
-  const categoryRef = useRef(null);
+
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [location]);
 
 
   return (
@@ -25,7 +30,7 @@ const App = () => {
         <TopSection />
         <NavigationBar />
 
-        <Routes>
+        <Routes >
           <Route path="/" element={<HomePage />} />
           <Route exact path="/detail/:id/" element={<DetailPage />} />
           <Route exact path="/categories" element={<CategoryPage />} />
@@ -35,6 +40,10 @@ const App = () => {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
 
+        <ScrollToTop className="scrollToTop" smooth
+          color='#fff'
+
+        />
 
         <Footer />
       </BrowserRouter>
