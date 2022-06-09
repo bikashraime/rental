@@ -5,6 +5,7 @@ import email from '../assets/icons/email.png';
 import phone from '../assets/icons/phone.png';
 import location from '../assets/icons/locationpoint.png';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 function Footer() {
     return (
@@ -28,10 +29,10 @@ function Footer() {
                                             <Link to='/categories'><span>Categories</span></Link>
                                         </li>
                                         <li className='bottom-nab'>
-                                            <Link to='*'><span>About us</span></Link>
+                                            <Link to='/about-us'><span>About us</span></Link>
                                         </li>
                                         <li className='bottom-nab'>
-                                            <Link to='*' ><span>Contact us</span></Link>
+                                            <HashLink to='/#contact' ><span>Contact us</span></HashLink>
                                         </li>
                                     </div>
 

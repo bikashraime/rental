@@ -20,7 +20,7 @@ function DetailPage() {
     }
 
     return (
-        <>
+        <div className='animated slideUp'>
             <div className={lightbox ? css.lightbox : css.lightbox2}>
                 <img src={currentImg} alt='current image' />
                 <img src={closeicon} className={css.closeSymbol} onClick={() => setLightbox(false)} />
@@ -117,7 +117,7 @@ function DetailPage() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 export default DetailPage
