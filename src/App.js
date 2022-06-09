@@ -1,4 +1,4 @@
-import { Route, Routes, Link, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, Link, BrowserRouter, NavLink } from 'react-router-dom';
 import { HomePage } from './pages/home_page/home_page.js';
 import './assets/styles/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,13 +15,20 @@ import { NotFoundPage } from './pages/not_found_page/not_found_page.js';
 import CategoryPage from './pages/category_page/category_page.js';
 import { ViewAllPage } from './pages/view_all_page.js';
 
+
 const App = () => {
   const categoryRef = useRef(null);
+
+  // const navLinkStyles = ({isActive}) => {
+  //   return{
+  //     fontWeight: isActive? 'bold' : 'normal',
+  //     textDecoration: isActive? 'none' : 'underline',
+  //   }
+  // }
 
 
   return (
     <>
-      <BrowserRouter >
         <TopSection />
         <NavigationBar />
 
@@ -36,8 +43,24 @@ const App = () => {
         </Routes>
 
 
-        <Footer />
-      </BrowserRouter>
+        <Footer/>
+
+        
+        {/* Learning */}
+
+
+
+
+
+        {/* <NavLink style={navLinkStyles} to='/'>Home</NavLink>
+        <NavLink style={navLinkStyles} to='signup'>Signup</NavLink>
+        <NavLink style={navLinkStyles} to='category'>Category</NavLink>
+
+        <Routes>
+          <Route path='/' element={<DetailPage/>}/>
+          <Route path='signup' element={<Signup start={true}/>} />
+          <Route path='category' element={<CategoryPage/>}/>
+        </Routes> */}
     </>
   );
 }

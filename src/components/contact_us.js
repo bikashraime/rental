@@ -1,15 +1,10 @@
-
 import { Col, Container, Form, Row, Text, Control, Button } from "react-bootstrap";
-
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
-
-
 
 export const ContactUs = (props) => {
     const position = [26.4525, 87.2718];
     return (
         <div className="contact-bg" id="contact">
-
             <Container>
                 <Row>
                     <Col sm={12} md={6}>
