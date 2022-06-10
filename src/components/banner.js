@@ -6,7 +6,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 export const SearchBanner = () => {
     return (
         <div className=" banner-bg d-flex align-items-center  justify-content-center">
-            <Container className='justify-content-center text-center'>
+            <Container className='banner-container justify-content-center text-center'>
                 <div className='banner-text'>How may I assist you?</div>
                 <Container className='mx-3 my-4 d-flex justify-content-center'>
                     <div class="input-group mb-3 bg-white searchContainer">
