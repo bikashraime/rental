@@ -8,7 +8,7 @@ import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 export const ContactUs = (props) => {
     const position = [26.4525, 87.2718];
     return (
-        <div className="contact-bg" id="contact">
+        <div className="contact-bg" id="contact" style={{ paddingTop: 60 }}>
 
             <Container>
                 <Row>
