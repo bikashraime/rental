@@ -3,7 +3,11 @@
 :root {
     --detailPageELementMargin: 17px;
     /* 0 0 3px rgb(195, 194, 194) */
-    --shadow: 0 0 3px rgb(195, 194, 194);
+    --shadow: 0 0 3px rgba(195, 194, 194, 0.7);
+
+    --background-color: #313539;
+    --shadow-color: #1e90ff;
+    --hover-color: rgba(0, 0, 0, 0.2);
 }
 
 .main {
@@ -18,9 +22,11 @@
 }
 
 .titleArea {
-    border-radius: 5px;
+    margin-top: 1rem;
+    border-radius: 10px;
     box-shadow: var(--shadow);
     padding: 1rem;
+
     margin-bottom: var(--detailPageELementMargin);
 }
 
@@ -81,7 +87,7 @@
 
 .overview {
     box-shadow: var(--shadow);
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: var(--detailPageELementMargin);
     padding: 1rem;
 }
@@ -97,6 +103,7 @@
     box-shadow: var(--shadow);
     padding: 1rem 0;
     display: flex;
+    border-radius: 10px;
     justify-content: space-between;
 }
 
@@ -112,11 +119,12 @@
 
 .overviewContainer #parameter {
     font-weight: 500;
+    padding: 20px;
 }
 
 .propertyDetail {
     box-shadow: var(--shadow);
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: var(--detailPageELementMargin);
     padding: 1rem;
 }
@@ -131,6 +139,8 @@
     margin-top: 1rem;
     box-shadow: var(--shadow);
     padding: 1rem 0;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .ownerInfo {
@@ -150,6 +160,8 @@
     margin-top: 1rem;
     box-shadow: var(--shadow);
     padding: 1rem 0;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .ownerInfoContainer div {
@@ -187,10 +199,8 @@
 
 /* fill contain cover none scale-down */
 .closeSymbol {
-    width: 15px;
-    position: fixed;
-    right: 10px;
-    top: 10px;
+    width: 25px;
+    height: 25px;
     filter: invert(1);
 }
 
