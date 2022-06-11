@@ -3,8 +3,8 @@ import './about_us.css'
 
 export const AboutUs = () => {
     return (
-        <div className='about-us animated fadeIn'>
-            <div className="about-us-container">
+        <div className='about-us'>
+            <div className="about-us-container animated fadeIn slideUp">
                 <h1><span>About Us</span></h1>
                 <p>
                     Shulabh Rens is a Nepal based rental service company providing information about rental properties.

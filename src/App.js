@@ -37,22 +37,18 @@ const App = () => {
         <ScrollTop />
 
         <Routes >
-          <Route path="/" element={<HomePage/>} />
+          <Route path="/" element={<HomePage />} />
           <Route exact path="/detail/:id/" element={<DetailPage />} />
           <Route exact path="/categories" element={<CategoryPage />} />
-          <Route exact path='/aboutus' element={<AboutUs/>}/>
-          <Route exact path="/signup" element={<Signup start={true} />} />
-          <Route exact path="/login" element={<Signup start={false} />} />
+          <Route exact path='/aboutus' element={<AboutUs />} />
+          <Route exact path="/signup" element={<Signup/>} />
           <Route exact path="/:pagename/viewall/" element={<ViewAllPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
 
-        <ScrollToTop className="scrollToTop" smooth
-          color='#fff'
+        <ScrollToTop className="scrollToTop" smooth color='#fff'/>
 
-        />
-                <Footer />
-
+        <Footer />
       </BrowserRouter>
     </div>
   );

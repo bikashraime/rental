@@ -1,23 +1,23 @@
-:root{
+:root {
     --form_background_color: #313539;
 }
-.form{
-    /* border: 1px solid green; */
-    margin-top: 50px; margin-bottom: 50px;
+.form {
+    /* background-color: #a2b2b3; */
+    padding: 0px 0;
     display: flex;
     justify-content: center;
 }
-.container{
-    border: 2px solid black;
+.container {
+    margin: 50px 0;
     padding: 30px;
     width: 600px;
     background-color: var(--form_background_color);
     border-radius: 10px;
 }
-.buttonArea{
+.buttonArea {
     /* border: 1px solid green; */
 }
-.button1{
+.button1 {
     width: 50%;
     padding: 10px;
     font-size: 1.3rem;
@@ -26,10 +26,12 @@
     color: white;
     border-radius: 5px;
 }
-.button1:hover{
+
+.button1:hover {
     background-color: #179B77;
 }
-.button2{
+
+.button2 {
     width: 50%;
     padding: 10px;
     font-size: 1.3rem;
@@ -38,11 +40,12 @@
     color: white;
     border-radius: 5px;
 }
-.button2:hover{
+
+.button2:hover {
     background-color: #677276;
 }
 
-.title{
+.title {
     margin-top: 25px;
     /* border: 1px solid white; */
     padding: 15px;
@@ -50,7 +53,11 @@
     font-size: 30px;
     color: white;
 }
-.name input, .email input, .password input, .newpassword input{
+
+.name input,
+.email input,
+.password input,
+.newpassword input {
     margin-top: 25px;
     width: 100%;
     font-size: 20px;
@@ -59,7 +66,8 @@
     color: white;
     border: 1px solid white;
 }
-.getStarted{
+
+.getStarted {
     width: 100%;
     margin-top: 25px;
     font-size: 2rem;
@@ -70,6 +78,7 @@
     border: none;
     border-radius: 5px;
 }
-.getStarted:hover{
+
+.getStarted:hover {
     background-color: #179B77;
 }

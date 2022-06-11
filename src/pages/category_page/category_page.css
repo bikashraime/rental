@@ -1,6 +1,7 @@
 .category-page{
     display: flex;
     justify-content: center;
+    /* background-color: #a2b2b3; */
 }
 .category-page-container{
     /* border: 1px solid red; */
