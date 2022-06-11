@@ -2,6 +2,9 @@ import React from 'react'
 import logo from '../assets/images/logo.png';
 import { Container, Image, Navbar, Nav } from 'react-bootstrap'
 
+import login from '../assets/svg/login.svg'
+import signup from '../assets/svg/signup.svg'
+
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 
@@ -9,8 +12,8 @@ export const NavigationBar = (props) => {
 
 
     return (
-        <>
-            <Navbar className='sticky-navbar' sticky='top' collapseOnSelect expand="lg" variant="dark" style={{ backgroundColor: "#313539" }}>
+        <div className='sticky-navbar'>
+            <Navbar collapseOnSelect expand="lg" variant="dark">
                 <Container>
                     <Navbar.Brand href="#">
                         <Link to='/'><img src={logo} height={60} /></Link>
@@ -23,11 +26,12 @@ export const NavigationBar = (props) => {
                             <Link className="nav-link" to='/categories'>Categories</Link>
                             <Link className="nav-link" to='/aboutus'>About us</Link>
                             <HashLink className="nav-link" to='/#contact'>Contact us</HashLink>
+                            <Link className='nav-link' to ='/signup'><span className='signup'>Sign up / Log in</span></Link>
                         </Nav>
-
                     </Navbar.Collapse>
+                
                 </Container>
             </Navbar>
-        </>
+        </div>
     )
 }

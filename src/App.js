@@ -30,14 +30,14 @@ function ScrollTop() {
 
 const App = () => {
   return (
-    <>
+    < div>
       <BrowserRouter>
-        <TopSection />
+        {/* <TopSection /> */}
         <NavigationBar />
         <ScrollTop />
 
         <Routes >
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage/>} />
           <Route exact path="/detail/:id/" element={<DetailPage />} />
           <Route exact path="/categories" element={<CategoryPage />} />
           <Route exact path='/aboutus' element={<AboutUs/>}/>
@@ -54,7 +54,7 @@ const App = () => {
                 <Footer />
 
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
