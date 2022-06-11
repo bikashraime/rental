@@ -29,7 +29,7 @@ function Footer() {
                                             <Link to='/categories'><span>Categories</span></Link>
                                         </li>
                                         <li className='bottom-nab'>
-                                            <Link to='/about-us'><span>About us</span></Link>
+                                            <Link to='/aboutus'><span>About us</span></Link>
                                         </li>
                                         <li className='bottom-nab'>
                                             <HashLink to='/#contact' ><span>Contact us</span></HashLink>

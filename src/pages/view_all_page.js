@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Row, Col, Container } from "react-bootstrap"
 import { useParams } from "react-router-dom";
 import { RentalCard } from "../components/rental_card"
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -16,7 +17,8 @@ export const ViewAllPage = (props) => {
             location: "Kathmandu",
             area: "1500 sq. ft",
             price: "Rs. 12000"
-        }, {
+        },
+        {
             image: "https://cdn.vox-cdn.com/thumbor/F-10vz_Z0k_6PftSz1rRhzYbAJg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21714408/2BWFDG7.jpg",
             name: "Apartments & Housing",
             location: "Kathmandu",
@@ -29,7 +31,8 @@ export const ViewAllPage = (props) => {
             location: "Kathmandu",
             area: "1500 sq. ft",
             price: "Rs. 12000"
-        }, {
+        }, 
+        {
             image: "https://cdn.vox-cdn.com/thumbor/F-10vz_Z0k_6PftSz1rRhzYbAJg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21714408/2BWFDG7.jpg",
             name: "Apartments & Housing",
             location: "Kathmandu",
@@ -42,7 +45,8 @@ export const ViewAllPage = (props) => {
             location: "Kathmandu",
             area: "1500 sq. ft",
             price: "Rs. 12000"
-        }, {
+        }, 
+        {
             image: "https://cdn.vox-cdn.com/thumbor/F-10vz_Z0k_6PftSz1rRhzYbAJg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21714408/2BWFDG7.jpg",
             name: "Apartments & Housing",
             location: "Kathmandu",
@@ -55,7 +59,8 @@ export const ViewAllPage = (props) => {
             location: "Kathmandu",
             area: "1500 sq. ft",
             price: "Rs. 12000"
-        }, {
+        }, 
+        {
             image: "https://cdn.vox-cdn.com/thumbor/F-10vz_Z0k_6PftSz1rRhzYbAJg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21714408/2BWFDG7.jpg",
             name: "Apartments & Housing",
             location: "Kathmandu",

@@ -1,0 +1,28 @@
+.about-us{
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.about-us-container{
+    width: 700px;
+}
+.about-us-container h1{
+    /* border: 1px solid red; */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-us-container h1 span{
+    border-bottom: 4px solid red;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-weight: 700;
+    height: 100%;
+}
+.about-us p{
+    margin-top: 25px;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 20px;
+}
