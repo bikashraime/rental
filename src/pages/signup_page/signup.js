@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import css from './signup.module.css'
+import wallpaper from '../../assets/images/banner-1.jpeg'
 
 function SignUpForm(props) {
     return (
-        <div style={props.click? {display: 'block'}:{display: 'none'}}>
+        <div  style={props.click? {display: 'block'}:{display: 'none'}}>
             <div className={css.title}>
                 <span>Sign Up for Free</span>
             </div>
@@ -40,8 +41,8 @@ function LoginForm(props) {
     )
 }
 
-function Signup(props) {
-    const [click, setClick] = useState(props.start)
+function Signup() {
+    const [click, setClick] = useState(true)
 
     return (
         <div className={css.form}>

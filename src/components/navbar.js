@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react'
 import logo from '../assets/images/logo.png';
 import { Container, Image, Navbar, Nav } from 'react-bootstrap'
 
-import { BrowserRouter as Router, Link, NavLink } from 'react-router-dom'
+import login from '../assets/svg/login.svg'
+import signup from '../assets/svg/signup.svg'
+
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 
 export const NavigationBar = (props) => {
@@ -13,8 +16,8 @@ export const NavigationBar = (props) => {
         window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
     }
     return (
-        <>
-            <Navbar className='sticky-navbar' sticky='top' expanded={toggleMenu} collapseOnSelect expand="lg" variant="dark" style={{ backgroundColor: "#313539" }}>
+        <div className='sticky-navbar'>
+            <Navbar collapseOnSelect expand="lg" variant="dark">
                 <Container>
                     <Navbar.Brand >
                         <Link to='/'><img src={logo} height={60} /></Link>
@@ -22,18 +25,17 @@ export const NavigationBar = (props) => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setToggleMenu(!toggleMenu)} />
                     <Navbar.Collapse id="responsive-navbar-nav" className=' flex-md-row-reverse'>
 
-                        <Nav >
-                            <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} exact to='/' onClick={() => setToggleMenu(false)}>Home</NavLink>
-                            <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to='/categories' onClick={() => { setToggleMenu(false) }} >Categories</NavLink>
-                            <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to='/aboutus' onClick={() => { setToggleMenu(false) }}>About us</NavLink>
-                            <HashLink className="nav-link" to='/#contact' smooth onClick={() => { setToggleMenu(false) }}
-                                scroll={(el) => scrollWithOffset(el)}
-                            >Contact us</HashLink>
+                        <Nav>
+                            <Link className="nav-link" to='/'>Home</Link>
+                            <Link className="nav-link" to='/categories'>Categories</Link>
+                            <Link className="nav-link" to='/aboutus'>About us</Link>
+                            <HashLink className="nav-link" to='/#contact'>Contact us</HashLink>
+                            <Link className='nav-link' to ='/signup'><span className='signup'>Sign up / Log in</span></Link>
                         </Nav>
-
                     </Navbar.Collapse>
+                
                 </Container>
             </Navbar>
-        </>
+        </div>
     )
 }

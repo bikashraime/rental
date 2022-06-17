@@ -59,8 +59,8 @@ const CategoryPage = () => {
         },
     ]);
     return (
-        <div className='category-page animated fadeIn'>
-            <Container className="category-page-container">
+        <div className='category-page' >
+            <Container className="category-page-container animated fadeIn slideUp">
                 <CategoryCard obj={categories[0]} />
                 <CategoryCard obj={categories[1]} />
                 <CategoryCard obj={categories[2]} />

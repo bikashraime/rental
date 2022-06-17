@@ -3,19 +3,26 @@
     --shadow-color: #1e90ff;
     --hover-color: rgba(0, 0, 0, 0.2);
 }
-
-
 html {
     scroll-behavior: smooth;
 }
-
 .sticky-navbar {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 9;
+    z-index: 100;  
+    background-color: #313539;  
 }
-
+.signup{
+    color: white  !important;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #1AB188;
+    padding: 10px;
+}
+.signup:hover{
+    background-color: #179B77;
+}
 .banner-bg {
     /* background-image: url('../images//banner.jpeg'); */
     background: linear-gradient(0deg, rgba(45, 45, 45, 0.3), rgba(45, 45, 45, 0.5)), url('../images//banner-1.jpeg');
@@ -25,11 +32,11 @@ html {
     background-attachment: fixed;
     background-color: black;
     aspect-ratio: 1280/600;
-    height: 70vh;
+    height: 57vh;
     width: 100%;
     vertical-align: middle;
+    position: relative;
 }
-
 .banner-text {
     color: white;
     font-weight: 600;
@@ -37,6 +44,27 @@ html {
     text-shadow: 0px 0px 10px #000000;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
+}
+.contact-info-searchbar{
+    border: 1px solid white;
+    padding: 15px;
+    position: absolute;
+    left: 100px;
+    bottom: 105px;
+}
+@media (max-width: 1600px){
+    .contact-info-searchbar{
+        position: static;
+    }
+}
+.contact-info-searchbar img{
+    filter: invert(1);  
+}
+.contact-info-text {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .searchContainer {
@@ -68,16 +96,6 @@ html {
 }
 
 
-.topbar-text {
-    font-size: 10px;
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-a.topbar-text:hover {
-    color: red;
-}
 
 a:hover>img {
     filter: opacity(1) drop-shadow(0 0 0 red);
@@ -258,6 +276,7 @@ li>a:hover {
 .map-box {
     height: 530px;
     border-radius: 10px;
+    z-index: 1;
 }
 
 
