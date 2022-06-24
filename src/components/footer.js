@@ -6,11 +6,12 @@ import phone from '../assets/icons/phone.png';
 import location from '../assets/icons/locationpoint.png';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { scrollContactWithOffset } from '../utils/scroll_offset';
 
 function Footer() {
     return (
-        <div className='py-3' style={{ backgroundColor: "#313539" }} >
-            <Container style={{ paddingTop: "30px", paddingBottom: "30px" }} >
+        <div className='footer py-3' style={{ backgroundColor: "#313539" }} >
+            <Container style={{ paddingTop: "30px", paddingBottom: "10px" }} >
                 {/* <div className='d-flex'> */}
                 <Row>
                     <Col className='d-flex justify-content-center' sm={6} md={4} xs={12} style={{ marginBottom: 30 }}>
@@ -32,7 +33,7 @@ function Footer() {
                                             <Link to='/aboutus'><span>About us</span></Link>
                                         </li>
                                         <li className='bottom-nab'>
-                                            <HashLink to='/#contact' ><span>Contact us</span></HashLink>
+                                            <HashLink to='/#contact' scroll={(el) => scrollContactWithOffset(el)} ><span>Contact us</span></HashLink>
                                         </li>
                                     </div>
 

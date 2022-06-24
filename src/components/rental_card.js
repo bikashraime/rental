@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export const RentalCard = (props) => {
     return (
-        <Link className="text-decoration-none" to="/detail/4" >
+        <Link className="text-decoration-none" to={"/detail/" + props.obj.id} >
             <div className="rental-card m-1">
                 <Image className="rental-image" src={props.obj.image} height={130} />
                 <div className="mx-2 my-2">

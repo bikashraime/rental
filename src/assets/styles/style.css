@@ -9,6 +9,12 @@ html {
     scroll-behavior: smooth;
 }
 
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .sticky-navbar {
     position: -webkit-sticky;
     position: sticky;
@@ -334,4 +340,8 @@ li>a:hover {
 .closeBtn:hover {
 
     background-color: var(--hover-color);
+}
+
+.expanded {
+    flex: 1;
 }
