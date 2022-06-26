@@ -7,14 +7,11 @@ import signup from '../assets/svg/signup.svg'
 
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
+import { scrollContactWithOffset } from '../utils/scroll_offset';
 
 export const NavigationBar = (props) => {
     const [toggleMenu, setToggleMenu] = useState(false)
-    const scrollWithOffset = (el) => {
-        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-        const yOffset = -240;
-        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
-    }
+
     return (
         <div className='sticky-navbar'>
             <Navbar collapseOnSelect expand="lg" variant="dark">
@@ -25,15 +22,16 @@ export const NavigationBar = (props) => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setToggleMenu(!toggleMenu)} />
                     <Navbar.Collapse id="responsive-navbar-nav" className=' flex-md-row-reverse'>
 
-                        <Nav>
-                            <Link className="nav-link" to='/'>Home</Link>
-                            <Link className="nav-link" to='/categories'>Categories</Link>
-                            <Link className="nav-link" to='/aboutus'>About us</Link>
-                            <HashLink className="nav-link" to='/#contact'>Contact us</HashLink>
-                            <Link className='nav-link' to ='/signup'><span className='signup'>Sign up / Log in</span></Link>
+                        <Nav >
+                            <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} exact to='/' onClick={() => setToggleMenu(false)}>Home</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to='/categories' onClick={() => { setToggleMenu(false) }} >Categories</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to='/aboutus' onClick={() => { setToggleMenu(false) }}>About us</NavLink>
+                            <HashLink className="nav-link" to='/#contact' smooth onClick={() => { setToggleMenu(false) }}
+                                scroll={(el) => scrollContactWithOffset(el)}
+                            >Contact us</HashLink>
                         </Nav>
                     </Navbar.Collapse>
-                
+
                 </Container>
             </Navbar>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import css from './detail.module.css'
 
 import location from './pictures/location.svg'
@@ -7,17 +7,48 @@ import house from './pictures/house.jpg'
 import b2 from './pictures/b2.jpg'
 import b3 from './pictures/b3.jpg'
 import background from './pictures/background.jpg'
+import api from '../../utils/api'
 
+import Lottie from "lottie-react";
+import loadingAnimation from "../../assets/animations/loading.json";
 
 function DetailPage() {
 
     const [lightbox, setLightbox] = useState(false);
     const [currentImg, setCurrentImg] = useState('');
 
+    const [detail, setDetail] = useState();
+
+
+    const [loading, setLoading] = useState(true);
+
     const giveImg = (img) => {
         setCurrentImg(img);
         setLightbox(true);
     }
+
+    useEffect(() => {
+        api.get(`products/`)
+            .then(resu => {
+                setLoading(false);
+                var res = resu.data;
+                setDetail({
+                    id: res.id,
+                    image: res.image,
+                    name: res.name ?? "N/A",
+                    location: res.location ?? "N/A",
+                    area: res.area ?? "N/A",
+                    price: "Rs. " + (res.price ?? "N/A"),
+
+                })
+            })
+    }, []);
+
+
+    if (loading) {
+        return (<Lottie animationData={loadingAnimation} loop />)
+    }
+
 
     return (
         <div className='animated slideUp'>
@@ -38,9 +69,9 @@ function DetailPage() {
                         <div className={css.location}>
                             <div>
                                 <img src={location} alt="location" />
-                                <span>Bhaktapur, Kathmandu</span>
+                                <span>{detail.location}</span>
                             </div>
-                            <span>Price: 250,000,000</span>
+                            <span>Price: {detail.price}</span>
                         </div>
                     </div>
                     <div className={css.imageArea}>
