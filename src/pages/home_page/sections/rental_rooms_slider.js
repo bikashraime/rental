@@ -1,76 +1,74 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, Container, Image } from "react-bootstrap";
 import { SwiperSlide } from "swiper/react";
 import { HomeSlider } from "../../../components/home_slider";
 import { RentalCard } from "../../../components/rental_card";
 
 import { withRouter } from 'react-router-dom';
+import api from "../../../utils/api";
 
 
 export const RentalRoomSilder = (props) => {
 
-    const [categories, setCaetgories] = useState([
-        {
-            image: "https://media.istockphoto.com/photos/bohemian-living-room-interior-3d-render-picture-id1182454657?k=20&m=1182454657&s=612x612&w=0&h=1xEsm7BqeicA8jYk9KlerUtGsAgzzo530l5Ak1HJdnc=",
-            name: "Home sweet home",
-            location: "Kathmandu",
-            area: "1500 sq. ft",
-            price: "Rs. 12000"
-        }, {
-            image: "https://cdn.vox-cdn.com/thumbor/F-10vz_Z0k_6PftSz1rRhzYbAJg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21714408/2BWFDG7.jpg",
-            name: "Apartments & Housing",
-            location: "Kathmandu",
-            area: "1500 sq. ft",
-            price: "Rs. 1200"
-        },
-        {
-            image: "https://media.istockphoto.com/photos/bohemian-living-room-interior-3d-render-picture-id1182454657?k=20&m=1182454657&s=612x612&w=0&h=1xEsm7BqeicA8jYk9KlerUtGsAgzzo530l5Ak1HJdnc=",
-            name: "Home sweet home",
-            location: "Kathmandu",
-            area: "1500 sq. ft",
-            price: "Rs. 12000"
-        }, {
-            image: "https://cdn.vox-cdn.com/thumbor/F-10vz_Z0k_6PftSz1rRhzYbAJg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21714408/2BWFDG7.jpg",
-            name: "Apartments & Housing",
-            location: "Kathmandu",
-            area: "1500 sq. ft",
-            price: "Rs. 1200"
-        },
-        {
-            image: "https://media.istockphoto.com/photos/bohemian-living-room-interior-3d-render-picture-id1182454657?k=20&m=1182454657&s=612x612&w=0&h=1xEsm7BqeicA8jYk9KlerUtGsAgzzo530l5Ak1HJdnc=",
-            name: "Home sweet home",
-            location: "Kathmandu",
-            area: "1500 sq. ft",
-            price: "Rs. 12000"
-        }, {
-            image: "https://cdn.vox-cdn.com/thumbor/F-10vz_Z0k_6PftSz1rRhzYbAJg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21714408/2BWFDG7.jpg",
-            name: "Apartments & Housing",
-            location: "Kathmandu",
-            area: "1500 sq. ft",
-            price: "Rs. 1200"
-        },
-        {
-            image: "https://media.istockphoto.com/photos/bohemian-living-room-interior-3d-render-picture-id1182454657?k=20&m=1182454657&s=612x612&w=0&h=1xEsm7BqeicA8jYk9KlerUtGsAgzzo530l5Ak1HJdnc=",
-            name: "Home sweet home",
-            location: "Kathmandu",
-            area: "1500 sq. ft",
-            price: "Rs. 12000"
-        }, {
-            image: "https://cdn.vox-cdn.com/thumbor/F-10vz_Z0k_6PftSz1rRhzYbAJg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/21714408/2BWFDG7.jpg",
-            name: "Apartments & Housing",
-            location: "Kathmandu",
-            area: "1500 sq. ft",
-            price: "Rs. 1200"
-        },
-    ]);
 
-    return <HomeSlider title="Rental rooms"
-        itemCounts={categories.length}
-        goto="/rentals/viewall/"
-        builder={(index) =>
-            <RentalCard obj={categories[index]} />
-        }
-        going='*'
-    />
+    const [categories, setCaetgories] = useState([]);
+
+
+    useEffect(() => {
+        api.get(`api/product/featured/`)
+            .then(resu => {
+                let result = resu.data;
+                let list = [];
+                console.log(result);
+                for (const index in result) {
+                    console.log(result[index]);
+                    let rents = []
+                    for (const j in result[index].rents) {
+                        console.log({
+                            id: result[index].rents[j].id,
+                            image: result[index].rents[j].image,
+                            name: result[index].rents[j].name,
+                            location: result[index].rents[j].location,
+                            area: "1500 sq. ft",
+                            price: "Rs. " + result[index].rents[j].price
+                        });
+                        rents.push({
+                            id: result[index].rents[j].id,
+                            image: result[index].rents[j].image,
+                            name: result[index].rents[j].name,
+                            location: result[index].rents[j].location,
+                            area: "1500 sq. ft",
+                            price: "Rs. " + result[index].rents[j].price
+                        });
+                    }
+                    list.push({
+                        name: result[index].category,
+                        rents: rents
+                    });
+                }
+                console.log(list)
+                setCaetgories(list)
+            })
+    }, []);
+
+
+    let render = [];
+    console.log(categories);
+    for (const index in categories) {
+        render.push(<HomeSlider title={categories[index].name}
+            itemCounts={categories[index].rents.length}
+            goto="/rentals/viewall/"
+            builder={(ind) => {
+                console.log(categories[index].rents[ind])
+                return <RentalCard obj={categories[index].rents[ind]} />
+            }}
+            going='*'
+        />
+        );
+    }
+
+    return render;
+
+
 
 }
