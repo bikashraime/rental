@@ -6,6 +6,7 @@ import { RentalCard } from "../../../components/rental_card";
 
 import { withRouter } from 'react-router-dom';
 import api from "../../../utils/api";
+import bannerGif from "../../../assets/animations/middlebanner.gif";
 
 
 export const RentalRoomSilder = (props) => {
@@ -55,9 +56,15 @@ export const RentalRoomSilder = (props) => {
     let render = [];
     console.log(categories);
     for (const index in categories) {
+        if (index % 4 == 0) {
+            render.push(
+                <div className='text-center' style={{ backgroundColor: "#BEDFE0", marginTop: 80 }}>
+                    <img src={bannerGif} height={400} />
+                </div>);
+        }
         render.push(<HomeSlider title={categories[index].name}
             itemCounts={categories[index].rents.length}
-            goto="/rentals/viewall/"
+            goto={categories[index].name + '/viewall/'}
             builder={(ind) => {
                 console.log(categories[index].rents[ind])
                 return <RentalCard obj={categories[index].rents[ind]} />
