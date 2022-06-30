@@ -79,11 +79,17 @@ function DetailPage(props) {
                         </div>
                     </div>
                     <div className={css.imageArea}>
-                        <div className={css.grid1}><img src={house} alt="house" onClick={() => giveImg(house)} /></div>
-                        <div><img src={house} onClick={() => giveImg(house)} /></div>
-                        <div><img src={b2} onClick={() => giveImg(b2)} /></div>
-                        <div><img src={b3} onClick={() => giveImg(b3)} /></div>
-                        <div><img src={background} onClick={() => giveImg(background)} /></div>
+                        {
+                            detail.images.map((img, index) => {
+                                if (index == 0)
+                                    return <div className={css.grid1}>
+                                        <img src={img} alt="house" onClick={() => giveImg(img)} />
+                                    </div>
+                                else if (index == 1) return <div><img src={b2} onClick={() => giveImg(b2)} /></div>
+                                else if (index == 2) return <div><img src={b3} onClick={() => giveImg(b2)} /></div>
+                                else if (index == 3) return <div><img src={background} onClick={() => giveImg(b2)} /></div>
+                            })
+                        }
                     </div>
                     <div className={css.overview}>
                         <span className={css.overviewTitle}>Overview</span>

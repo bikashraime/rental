@@ -28,10 +28,8 @@ export const CategorySilder = (props) => {
                 var result = resu.data;
                 var list = [];
                 for (const i in result) {
-                    console.log(i)
                     let res = result[i]
                     list.push({
-                        catImage: "",
                         cateName: res.name,
                         catImage: res.image,
                     })
