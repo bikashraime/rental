@@ -31,33 +31,13 @@ function ScrollTop() {
 
 const App = () => {
   return (
-<<<<<<< HEAD
-    < div>
-      <BrowserRouter>
-        {/* <TopSection /> */}
-=======
     <div className='main'>
       <BrowserRouter className="main">
 
-        <TopSection />
->>>>>>> paras
         <NavigationBar />
         <ScrollTop />
         <div className='expanded'>
 
-<<<<<<< HEAD
-        <Routes >
-          <Route path="/" element={<HomePage />} />
-          <Route exact path="/detail/:id/" element={<DetailPage />} />
-          <Route exact path="/categories" element={<CategoryPage />} />
-          <Route exact path='/aboutus' element={<AboutUs />} />
-          <Route exact path="/signup" element={<Signup/>} />
-          <Route exact path="/:pagename/viewall/" element={<ViewAllPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-
-        <ScrollToTop className="scrollToTop" smooth color='#fff'/>
-=======
           <Routes  >
             <Route path="/" element={<HomePage />} />
             <Route exact path="/detail/:id/" element={<DetailPage />} />
@@ -76,7 +56,6 @@ const App = () => {
           />
         </div>
         <Footer />
->>>>>>> paras
 
         <Footer />
       </BrowserRouter>

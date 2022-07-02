@@ -3,11 +3,10 @@
     --shadow-color: #1e90ff;
     --hover-color: rgba(0, 0, 0, 0.2);
 }
+
 html {
     scroll-behavior: smooth;
 }
-<<<<<<< HEAD
-=======
 
 .main {
     min-height: 100vh;
@@ -15,24 +14,26 @@ html {
     flex-direction: column;
 }
 
->>>>>>> paras
 .sticky-navbar {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 100;  
-    background-color: #313539;  
+    z-index: 100;
+    background-color: #313539;
 }
-.signup{
-    color: white  !important;
+
+.signup {
+    color: white !important;
     border: 1px solid white;
     border-radius: 4px;
     background-color: #1AB188;
     padding: 10px;
 }
-.signup:hover{
+
+.signup:hover {
     background-color: #179B77;
 }
+
 .banner-bg {
     /* background-image: url('../images//banner.jpeg'); */
     background: linear-gradient(0deg, rgba(45, 45, 45, 0.3), rgba(45, 45, 45, 0.5)), url('../images//banner-1.jpeg');
@@ -47,6 +48,7 @@ html {
     vertical-align: middle;
     position: relative;
 }
+
 .banner-text {
     color: white;
     font-weight: 600;
@@ -55,21 +57,25 @@ html {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
-.contact-info-searchbar{
+
+.contact-info-searchbar {
     border: 1px solid white;
     padding: 15px;
     position: absolute;
     left: 100px;
     bottom: 105px;
 }
-@media (max-width: 1600px){
-    .contact-info-searchbar{
+
+@media (max-width: 1600px) {
+    .contact-info-searchbar {
         position: static;
     }
 }
-.contact-info-searchbar img{
-    filter: invert(1);  
+
+.contact-info-searchbar img {
+    filter: invert(1);
 }
+
 .contact-info-text {
     font-size: 20px;
     color: white;

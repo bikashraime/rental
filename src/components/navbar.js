@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import logo from '../assets/images/logo.png';
-import { Container, Image, Navbar, Nav } from 'react-bootstrap'
+import { Container, Navbar, Nav } from 'react-bootstrap'
 
-import login from '../assets/svg/login.svg'
-import signup from '../assets/svg/signup.svg'
-
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link, NavLink } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 import { scrollContactWithOffset } from '../utils/scroll_offset';
 
