@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import logo from '../assets/images/logo.png';
-import { Container, Image, Navbar, Nav , NavLink} from 'react-bootstrap'
+import { Container, Navbar, Nav, Button } from 'react-bootstrap'
 
-import login from '../assets/svg/login.svg'
-import signup from '../assets/svg/signup.svg'
-
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link, NavLink } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 import { scrollContactWithOffset } from '../utils/scroll_offset';
 
@@ -28,6 +25,7 @@ export const NavigationBar = (props) => {
                             <HashLink className="nav-link" to='/#contact' smooth onClick={() => { setToggleMenu(false) }}
                                 scroll={(el) => scrollContactWithOffset(el)}
                             >Contact us</HashLink>
+                            <NavLink className="signup" to='/signup'>Signup/Login</NavLink>
                         </Nav>
                     </Navbar.Collapse>
 

@@ -11,8 +11,9 @@ import api from '../../utils/api'
 
 import Lottie from "lottie-react";
 import loadingAnimation from "../../assets/animations/loading.json";
+import { useParams } from "react-router-dom";
 
-function DetailPage() {
+function DetailPage(props) {
 
     const [lightbox, setLightbox] = useState(false);
     const [currentImg, setCurrentImg] = useState('');
@@ -27,8 +28,10 @@ function DetailPage() {
         setLightbox(true);
     }
 
+    let { id } = useParams();
+
     useEffect(() => {
-        api.get(`products/`)
+        api.get(`api/product/detail/${id}/`)
             .then(resu => {
                 setLoading(false);
                 var res = resu.data;
@@ -39,16 +42,17 @@ function DetailPage() {
                     location: res.location ?? "N/A",
                     area: res.area ?? "N/A",
                     price: "Rs. " + (res.price ?? "N/A"),
-
+                    images: res.images,
+                    overview: res.overviews,
                 })
             })
-    }, []);
+    }, [id]);
 
 
     if (loading) {
         return (<Lottie animationData={loadingAnimation} loop />)
     }
-
+    console.log(detail)
 
     return (
         <div className='animated slideUp'>
@@ -75,51 +79,28 @@ function DetailPage() {
                         </div>
                     </div>
                     <div className={css.imageArea}>
-                        <div className={css.grid1}><img src={house} alt="house" onClick={() => giveImg(house)} /></div>
-                        <div><img src={house} onClick={() => giveImg(house)} /></div>
-                        <div><img src={b2} onClick={() => giveImg(b2)} /></div>
-                        <div><img src={b3} onClick={() => giveImg(b3)} /></div>
-                        <div><img src={background} onClick={() => giveImg(background)} /></div>
+                        {
+                            detail.images.map((img, index) => {
+                                if (index == 0)
+                                    return <div className={css.grid1}>
+                                        <img src={img} alt="house" onClick={() => giveImg(img)} />
+                                    </div>
+                                else if (index == 1) return <div><img src={b2} onClick={() => giveImg(b2)} /></div>
+                                else if (index == 2) return <div><img src={b3} onClick={() => giveImg(b2)} /></div>
+                                else if (index == 3) return <div><img src={background} onClick={() => giveImg(b2)} /></div>
+                            })
+                        }
                     </div>
                     <div className={css.overview}>
                         <span className={css.overviewTitle}>Overview</span>
                         <div className={css.overviewContainer}>
-                            <div className={css.overviewConatinerBox}>
-                                <div>
-                                    <span id={css['parameter']}>Property ID: </span>
-                                    <span>12345</span>
-                                </div>
-                                <div>
-                                    <span id={css['parameter']}>Price: </span>
-                                    <span>Rs. 250,000,000</span>
-                                </div>
-                                <div>
-                                    <span id={css['parameter']}>Property Type: </span>
-                                    <span>Residentail</span>
-                                </div>
-                                <div>
-                                    <span id={css['parameter']}>Property Face: </span>
-                                    <span>East</span>
-                                </div>
-                            </div>
-                            <div className={css.overviewConatinerBox}>
-                                <div>
-                                    <span id={css['parameter']}>Area: </span>
-                                    <span>1000sq.feet</span>
-                                </div>
-                                <div>
-                                    <span id={css['parameter']}>Road Access: </span>
-                                    <span>Yes</span>
-                                </div>
-                                <div>
-                                    <span id={css['parameter']}>Parking Area: </span>
-                                    <span>5 cars</span>
-                                </div>
-                                <div>
-                                    <span id={css['parameter']}>Posted: </span>
-                                    <span>26 May 2022</span>
-                                </div>
-                            </div>
+                            {
+                                detail.overview.map((over) => <div>
+                                    <span id={css['parameter']}>{over.name}: </span>
+                                    <span>{over.value}</span>
+                                </div>)
+                            }
+
                         </div>
                     </div>
                     <div className={css.propertyDetail}>
@@ -127,7 +108,8 @@ function DetailPage() {
                             Property Detail
                         </span>
                         <div className={css.propertyDetailContainer}>
-                            <span>No detail available
+                            <span>
+                                {/* {detail} */}
                             </span>
                         </div>
                     </div>

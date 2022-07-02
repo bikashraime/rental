@@ -34,7 +34,6 @@ const App = () => {
     <div className='main'>
       <BrowserRouter className="main">
 
-        <TopSection />
         <NavigationBar />
         <ScrollTop />
         <div className='expanded'>

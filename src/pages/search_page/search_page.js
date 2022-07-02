@@ -12,7 +12,7 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 export const SearchPage = (props) => {
-    const { pagename } = useParams();
+    let { query } = useParams();
     const [page, setPage] = useState(5);
     const [loading, setLoading] = useState(true);
     const [totalResults, setTotalResults] = useState("-");
@@ -20,25 +20,27 @@ export const SearchPage = (props) => {
 
     useEffect(() => {
         setLoading(true);
-        api.get(`products/`)
+        api.get(`api/search/${query}/`)
             .then(resu => {
                 setLoading(false);
-                var result = resu.data.results;
+                var result = resu.data;
+                console.log(result)
                 var list = [];
-                for (var i = 0; i < result.length; i++) {
+                for (const i in result) {
+                    console.log(i)
                     let res = result[i]
                     list.push({
                         id: res.id,
                         image: res.image,
                         name: res.name,
                         location: res.location,
-                        area: "1500 sq. ft",
+                        area: "-",
                         price: "Rs. " + res.price
                     })
                 }
                 setCaetgories(list)
             })
-    }, [page]);
+    }, [query, page]);
     if (loading) {
         return (<Lottie animationData={loadingAnimation} loop />)
     }
