@@ -24,7 +24,6 @@
     background-color: #1AB188;
     border: none;
     color: white;
-    border-radius: 5px;
 }
 
 .button1:hover {
@@ -38,7 +37,6 @@
     background-color: #435359;
     border: none;
     color: white;
-    border-radius: 5px;
 }
 
 .button2:hover {
@@ -62,6 +60,7 @@
     width: 100%;
     font-size: 20px;
     padding: 8px;
+    border-radius: 5px;
     background-color: var(--form_background_color);
     color: white;
     border: 1px solid white;
@@ -70,7 +69,7 @@
 .getStarted {
     width: 100%;
     margin-top: 25px;
-    font-size: 2rem;
+    font-size: 1.1rem;
     padding: 10px;
     font-weight: bold;
     color: white;

@@ -48,8 +48,8 @@ function Signup() {
         <div className={css.form}>
             <div className={css.container}>
                 <div className={css.buttonArea}>
-                    <button  className={click? css.button1: css.button2} onClick={()=>setClick(true)}>Sign up</button>
-                    <button className={click? css.button2: css.button1} onClick={()=>setClick(false)}>Log in</button>
+                    <button  className={click? css.button1: css.button2} style={{borderRadius: '5px 0 0 5px'}} onClick={()=>setClick(true)}>Sign up</button>
+                    <button className={click? css.button2: css.button1} style={{borderRadius: '0 5px 5px 0'}} onClick={()=>setClick(false)}>Log in</button>
                 </div>
                 <SignUpForm click = {click}/>
                 <LoginForm click = {click}/>
