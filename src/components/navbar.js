@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import logo from '../assets/images/logo.png';
-import { Container, Image, Navbar, Nav } from 'react-bootstrap'
+import { Container, Image, Navbar, Nav , NavLink} from 'react-bootstrap'
 
 import login from '../assets/svg/login.svg'
 import signup from '../assets/svg/signup.svg'
@@ -21,8 +21,7 @@ export const NavigationBar = (props) => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setToggleMenu(!toggleMenu)} />
                     <Navbar.Collapse id="responsive-navbar-nav" className=' flex-md-row-reverse'>
-
-                        <Nav >
+                        <Nav>
                             <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} exact to='/' onClick={() => setToggleMenu(false)}>Home</NavLink>
                             <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to='/categories' onClick={() => { setToggleMenu(false) }} >Categories</NavLink>
                             <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to='/aboutus' onClick={() => { setToggleMenu(false) }}>About us</NavLink>

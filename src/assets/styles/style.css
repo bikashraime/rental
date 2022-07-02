@@ -6,8 +6,6 @@
 html {
     scroll-behavior: smooth;
 }
-<<<<<<< HEAD
-=======
 
 .main {
     min-height: 100vh;
@@ -15,7 +13,6 @@ html {
     flex-direction: column;
 }
 
->>>>>>> paras
 .sticky-navbar {
     position: -webkit-sticky;
     position: sticky;
