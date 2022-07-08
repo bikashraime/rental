@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { HomeSlider } from "../../../components/home_slider";
-import api from "../../../utils/api";
+import api, {mediaUrl} from "../../../utils/api";
 
 const CategoryCard = (props) => {
     return (
@@ -31,7 +31,7 @@ export const CategorySilder = (props) => {
                     let res = result[i]
                     list.push({
                         cateName: res.name,
-                        catImage: res.image,
+                        catImage: mediaUrl + res.image,
                     })
                 }
                 setCaetgories(list)

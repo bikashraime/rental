@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from "react";
 import './category_page.css'
 import { Image, Card, Button, Container, Row, Col } from "react-bootstrap";
-import api from '../../utils/api';
+import api, { mediaUrl } from '../../utils/api';
 
 const CategoryCard = (props) => {
     const styles = {
@@ -46,7 +46,7 @@ const CategoryPage = () => {
                     let res = result[i]
                     list.push({
                         cateName: res.name,
-                        catImage: res.image,
+                        catImage: mediaUrl + res.image,
                     })
                 }
                 setCaetgories(list)

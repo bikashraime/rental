@@ -7,7 +7,7 @@ import house from './pictures/house.jpg'
 import b2 from './pictures/b2.jpg'
 import b3 from './pictures/b3.jpg'
 import background from './pictures/background.jpg'
-import api from '../../utils/api'
+import api, { mediaUrl } from '../../utils/api'
 
 import Lottie from "lottie-react";
 import loadingAnimation from "../../assets/animations/loading.json";
@@ -35,14 +35,18 @@ function DetailPage(props) {
             .then(resu => {
                 setLoading(false);
                 var res = resu.data;
+                let imgs = [];
+                for(let index in  res.images){
+                    imgs.push(mediaUrl+ res.images[index])
+                }
                 setDetail({
                     id: res.id,
-                    image: res.image,
+                    image: mediaUrl +res.image,
                     name: res.name ?? "N/A",
                     location: res.location ?? "N/A",
                     area: res.area ?? "N/A",
                     price: "Rs. " + (res.price ?? "N/A"),
-                    images: res.images,
+                    images: imgs,
                     overview: res.overviews,
                 })
             })

@@ -5,7 +5,7 @@ import { HomeSlider } from "../../../components/home_slider";
 import { RentalCard } from "../../../components/rental_card";
 
 import { withRouter } from 'react-router-dom';
-import api from "../../../utils/api";
+import api, { mediaUrl } from "../../../utils/api";
 import bannerGif from "../../../assets/animations/middlebanner.gif";
 
 
@@ -35,7 +35,7 @@ export const RentalRoomSilder = (props) => {
                         });
                         rents.push({
                             id: result[index].rents[j].id,
-                            image: result[index].rents[j].image,
+                            image: mediaUrl + result[index].rents[j].image,
                             name: result[index].rents[j].name,
                             location: result[index].rents[j].location,
                             area: "1500 sq. ft",

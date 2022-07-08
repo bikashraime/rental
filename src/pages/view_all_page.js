@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { RentalCard } from "../components/rental_card"
 import Lottie from "lottie-react";
 import loadingAnimation from "../assets/animations/loading.json";
-import api from "../utils/api";
+import api, {mediaUrl} from "../utils/api";
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -87,7 +87,7 @@ export const ViewAllPage = (props) => {
                     let res = result[i]
                     list.push({
                         id: res.id,
-                        image: res.image,
+                        image: mediaUrl + res.image,
                         name: res.name,
                         location: res.location,
                         area: "-",
