@@ -9,12 +9,17 @@ import { scrollContactWithOffset } from '../utils/scroll_offset';
 export const NavigationBar = (props) => {
     const [toggleMenu, setToggleMenu] = useState(false)
 
+    let logoDesign ={
+        filter: 'invert(100%)',
+        height: '60px'
+    }
+
     return (
         <div className='sticky-navbar'>
-            <Navbar collapseOnSelect expand="lg" variant="dark">
+            <Navbar collapseOnSelect expand="lg"  style={{backgroundColor: '#F4F4F4'}}>
                 <Container>
                     <Navbar.Brand >
-                        <Link to='/'><img src={logo} height={60} /></Link>
+                        <Link to='/'><img src={logo} style={logoDesign} /></Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setToggleMenu(!toggleMenu)} />
                     <Navbar.Collapse id="responsive-navbar-nav" className=' flex-md-row-reverse'>

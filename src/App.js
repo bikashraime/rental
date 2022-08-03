@@ -17,6 +17,7 @@ import { ViewAllPage } from './pages/view_all_page.js';
 import ScrollToTop from 'react-scroll-to-top';
 import { AboutUs } from './pages/about_us_page/about_us.js';
 import { SearchPage } from './pages/search_page/search_page.js';
+import Topbar from './components/Topbar.js';
 
 
 function ScrollTop() {
@@ -32,6 +33,9 @@ function ScrollTop() {
 const App = () => {
   return (
     <div className='main'>
+      <Topbar/>
+
+
       <BrowserRouter className="main">
 
         <NavigationBar />
