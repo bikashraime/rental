@@ -4,7 +4,6 @@ import './assets/styles/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/footer.js';
 import { HomeSlider } from './components/home_slider.js';
-import { TopSection } from './components/top_section.js';
 import { NavigationBar } from './components/navbar.js';
 import { SearchBanner } from './components/banner.js';
 import { CategorySilder } from './pages/home_page/sections/category_slider.js';
@@ -18,6 +17,8 @@ import ScrollToTop from 'react-scroll-to-top';
 import { AboutUs } from './pages/about_us_page/about_us.js';
 import { SearchPage } from './pages/search_page/search_page.js';
 import Topbar from './components/Topbar.js';
+import { Navbar } from 'react-bootstrap';
+import { RentalCard } from './components/rental_card.js';
 
 
 function ScrollTop() {
@@ -33,15 +34,11 @@ function ScrollTop() {
 const App = () => {
   return (
     <div className='main'>
-      <Topbar/>
-
-
+      <Topbar />
       <BrowserRouter className="main">
-
         <NavigationBar />
         <ScrollTop />
         <div className='expanded'>
-
           <Routes  >
             <Route path="/" element={<HomePage />} />
             <Route exact path="/detail/:id/" element={<DetailPage />} />
@@ -52,11 +49,7 @@ const App = () => {
             <Route exact path="/search/:query/" element={<SearchPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-
-          <ScrollToTop className="scrollToTop" smooth
-            color='#fff'
-
-          />
+          <ScrollToTop className="scrollToTop" smooth color='#fff'/>
         </div>
         <Footer />
 

@@ -22,21 +22,21 @@ export const CategorySilder = (props) => {
     const [categories, setCaetgories] = useState([]);
 
 
-    useEffect(() => {
-        api.get(`api/categories/`)
-            .then(resu => {
-                var result = resu.data;
-                var list = [];
-                for (const i in result) {
-                    let res = result[i]
-                    list.push({
-                        cateName: res.name,
-                        catImage: mediaUrl + res.image,
-                    })
-                }
-                setCaetgories(list)
-            })
-    }, []);
+    // useEffect(() => {
+    //     api.get(`api/categories/`)
+    //         .then(resu => {
+    //             var result = resu.data;
+    //             var list = [];
+    //             for (const i in result) {
+    //                 let res = result[i]
+    //                 list.push({
+    //                     cateName: res.name,
+    //                     catImage: mediaUrl + res.image,
+    //                 })
+    //             }
+    //             setCaetgories(list)
+    //         })
+    // }, []);
 
     return <HomeSlider
         title="Categories"

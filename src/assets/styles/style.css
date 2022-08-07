@@ -8,6 +8,12 @@ html {
     scroll-behavior: smooth;
 }
 
+.testingfunction{
+    /* background-color: red; */
+    max-width: fit-content ;
+}
+
+
 .main {
     min-height: 100vh;
     display: flex;
@@ -26,14 +32,14 @@ html {
     color: white !important;
     border: 1px solid white;
     border-radius: 4px;
-    background-color: #1AB188;
+    background-color: #435359;
     padding: 10px;
     text-decoration: none;
     width: fit-content;
 }
 
 .signup:hover {
-    background-color: #179B77;
+    background-color: #677276;
 }
 
 .banner-bg {
@@ -213,7 +219,7 @@ a.viewall-text:hover {
 .rental-text {
     text-decoration: none !important;
     color: #000;
-    font-size: 12px;
+    font-size: .9rem;
 
 }
 
