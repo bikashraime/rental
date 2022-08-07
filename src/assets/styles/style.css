@@ -224,7 +224,7 @@ a.viewall-text:hover {
 }
 
 .footer-title {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -235,20 +235,24 @@ li.bottom-nab {
 
 li>a {
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 
 li>a:hover {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-size: 16px;
     font-weight: 700;
 }
 
 .footer-page-link {
-    border-left: #fff solid 2px;
+    border-left: black solid 2px;
     padding-left: 20px;
 }
+.footer-logo a{
+    margin-right: 0.5rem;
+}
+
 
 
 .contact-bg {
@@ -339,7 +343,7 @@ li>a:hover {
 }
 
 .scrollToTop {
-    background-color: var(--background-color);
+    background-color: #bebbbbf8;
     border-radius: 100px;
     width: 70px;
     height: 70px;
@@ -351,7 +355,7 @@ li>a:hover {
     z-index: 2;
     cursor: pointer;
     transition: opacity 1s ease-in-out;
-    box-shadow: 0 0px 5px 0 #fff;
+    box-shadow: 0 0px 5px 0 #F4F4F4;
     border: none;
     outline: none;
 }

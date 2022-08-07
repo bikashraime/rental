@@ -14,17 +14,12 @@ export const NavigationBar = (props) => {
         filter: 'invert(100%)',
         // border: '1px solid red',
         height: '6rem', 
-        margin: '-1rem'
-        
+        margin: '-1rem' 
     }
 
     const collapseMend = {
         // backgroundColor: "green",
-        maxWidth: "fit-content",
-    }
-
-    const searchButton = {
-
+        maxWidth: "fit-content"
     }
 
     return (
@@ -46,8 +41,15 @@ export const NavigationBar = (props) => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setToggleMenu(!toggleMenu)} />
                     <Navbar.Collapse style={collapseMend}>
                         <Nav>
-                            <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} exact to='/' onClick={() => setToggleMenu(false)}>Home</NavLink>
-                            <NavDropdown title="Categories" id="basic-nav-dropdown">
+                            <NavLink 
+                                title='Home' 
+                                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} 
+                                exact to='/' 
+                                onClick={() => setToggleMenu(false)}
+                            >
+                                <i class="fa-solid fa-house"></i>
+                            </NavLink>
+                            <NavDropdown title={<i class="fa-solid fa-bars"></i>} id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Room</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Flat & Apartments</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">House</NavDropdown.Item>
@@ -57,15 +59,23 @@ export const NavigationBar = (props) => {
                                 <NavDropdown.Item href="#action/3.3">Park</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Cafeteria</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Hotel</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
                             </NavDropdown>
-                            <NavLink className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to='/aboutus' onClick={() => { setToggleMenu(false) }}>About us</NavLink>
-                            <HashLink className="nav-link" to='/#contact' smooth onClick={() => { setToggleMenu(false) }}
+                            <NavLink 
+                                title='About Us'
+                                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to='/aboutus' 
+                                onClick={() => { setToggleMenu(false) }}
+                            >
+                                <i class="fa-solid fa-circle-question"></i>
+                            </NavLink>
+                            <HashLink
+                                title='Contact'
+                                className="nav-link" to='/#contact' 
+                                smooth 
+                                onClick={() => { setToggleMenu(false) }}
                                 scroll={(el) => scrollContactWithOffset(el)}
-                            >Contact us</HashLink>
+                            >
+                                <i class="fa-solid fa-address-book"></i>
+                            </HashLink>
                             <NavLink className="signup" to='/signup'>Signup / Login</NavLink>
                         </Nav>
                     </Navbar.Collapse>

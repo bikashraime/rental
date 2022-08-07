@@ -16,17 +16,17 @@ function Topbar() {
                     </div>
                 </div>
                 <div className="topbar-logos d-flex justify-content-center align-items-center">
-                    <a href="https://www.facebook.com" target='_blank'>
-                        <i class="fa-brands fa-square-facebook fa-xl" style={{ color: '#4267B2' }}></i>
+                    <a title='Facebook' href="https://www.facebook.com" target='_blank'>
+                        <i class="fa-brands fa-square-facebook fa-xl" style={{ color: '#677276' }}></i>
                     </a>
-                    <a href="https://www.instagram.com" target='_blank'>
-                        <i class="fa-brands fa-square-instagram fa-xl" style={{ color: '#DC3035' }}></i>
+                    <a title='Instagram' href="https://www.instagram.com" target='_blank'>
+                        <i class="fa-brands fa-square-instagram fa-xl" style={{ color: '#677276' }}></i>
                     </a>
-                    <a href="https://www.twitter.com" target='_blank'>
-                        <i class="fa-brands fa-twitter fa-xl" style={{ color: '#1DA1F2' }}></i>
+                    <a title='Twitter' href="https://www.twitter.com" target='_blank'>
+                        <i class="fa-brands fa-twitter fa-xl" style={{ color: '#677276' }}></i>
                     </a>
-                    <a href="https://www.youtube.com" target='_blank'>
-                        <i class="fa-brands fa-youtube fa-xl" style={{ color: '#FF0000' }}></i>
+                    <a title='Youtube' href="https://www.youtube.com" target='_blank'>
+                        <i class="fa-brands fa-youtube fa-xl" style={{ color: '#677276' }}></i>
                     </a>
                 </div>
             </div>
