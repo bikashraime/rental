@@ -19,6 +19,7 @@ import { SearchPage } from './pages/search_page/search_page.js';
 import Topbar from './components/Topbar.js';
 import { Navbar } from 'react-bootstrap';
 import { RentalCard } from './components/rental_card.js';
+import Profile from './pages/user_profile/profile.js';
 
 
 function ScrollTop() {
@@ -41,6 +42,7 @@ const App = () => {
         <div className='expanded'>
           <Routes  >
             <Route path="/" element={<HomePage />} />
+            <Route path='/profile' element={<Profile/>}></Route>
             <Route exact path="/detail/:id/" element={<DetailPage />} />
             <Route exact path="/categories" element={<CategoryPage />} />
             <Route exact path='/aboutus' element={<AboutUs />} />

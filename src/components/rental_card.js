@@ -1,27 +1,30 @@
 import { Link } from "react-router-dom";
 import testImage from '../assets/images/banner-1.jpeg'
 
+
+
 export const RentalCard = (props) => {
-
-
 
     // For testing
     const data = {
+        id:'002',
         intro: 'House for Sale',
         location: 'Dharan',
         area: '2500 sq.feet',
         price: '20,00,00,000'
     }
-    
-
 
     const practice = true;
 
     return (
         <>
-            <div className="rental-card m-1" style={{minWidth: '250px'}}>
-                <img className="rental-image" src={practice ? testImage : props.obj.image} height={185} alt="Image" />
-                <div className="mx-2 my-2">
+            <div className="rental-card m-1" style={{ minWidth: '250px' }}>
+                <img className="rental-image" src={practice ? testImage : props.obj.image} height={205} alt="Image" />
+                <div className="mx-4 my-2">
+                    <span className="d-block align-middle">
+                        <i class="fa-solid fa-id-badge"></i>
+                        <span className="mx-2 rental-text">{practice ? data.id : props.obj.name}</span>
+                    </span>
                     <span className="d-block align-middle">
                         <i class="fa-solid fa-building fa-xs"></i>
                         <span className="mx-2 rental-text">{practice ? data.intro : props.obj.name}</span>
