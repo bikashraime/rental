@@ -7,6 +7,9 @@ function Profile() {
         <div className="user-profile">
             <div className="container">
                 <div className="user-detail" >
+                    <span style={{fontSize:'1.6rem', fontWeight:'bold'}}>Profile</span>
+
+                    <div style={{ borderBottom: '1px solid #bebebe' }}></div>
                     <div>
                         <i class="fa-solid fa-person"></i>
                         <span>User's name</span>
@@ -19,19 +22,17 @@ function Profile() {
                         <i class="fa-solid fa-location-dot"></i>
                         <span>Address</span>
                     </div>
-                    <div  style={{borderBottom: '1px solid #bebebe'}}></div>
                 </div>
 
                 <div className="user-content">
                     <div className="title">
                         <span>Advertisement Posted</span>
                     </div>
-                    <div className="cards" style={{marginTop: '1rem'}}>
-                        <RentalCard/>
-                        <RentalCard/>
-                        <RentalCard/>
-                        <RentalCard/>
-                        <RentalCard/>
+                    <div className="cards" style={{ margin: '1rem 0' }}>
+                        <RentalCard />
+                        <RentalCard />
+                        <RentalCard />
+                        <RentalCard />
 
                     </div>
                 </div>

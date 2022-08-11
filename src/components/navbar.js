@@ -49,7 +49,7 @@ export const NavigationBar = (props) => {
                             >
                                 <i class="fa-solid fa-house"></i>
                             </NavLink>
-                            <div title='CATEGORIES'>
+                            <div title='Categories'>
                                 <NavDropdown title={<i class="fa-solid fa-bars"></i>} id="basic-nav-dropdown">
                                     <NavDropdown.Item href="#action/3.1">Room</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Flat & Apartments</NavDropdown.Item>
@@ -82,19 +82,28 @@ export const NavigationBar = (props) => {
                             <NavLink className="signup" to='/signup'>Signup / Login</NavLink>
 
 
-                            <NavDropdown 
+                            <NavDropdown
                                 title={
-                                    <span style={{color: 'Black', fontWeight: '500', fontSize:'1.2rem'}}>
+                                    <span style={{ color: 'Black', fontWeight: '500', fontSize: '1.2rem' }}>
                                         User
                                     </span>
-                                } 
+                                }
                                 id="basic-nav-dropdown"
-                                >
+                            >
                                 <NavDropdown.Item href="#action/3.1">
-                                    <Link to='/profile' style={{textDecoration: 'none', color: 'inherit'}}>Profile</Link>
+                                    <Link to='/profile' style={{ textDecoration: 'none', color: 'inherit' }}>Profile</Link>
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Setting</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Log out</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item href="#action/3.2">
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span style={{ marginLeft: '.3rem' }}>
+                                        <Link to='/setting' style={{ textDecoration: 'none', color: 'inherit' }}>Setting</Link>
+                                    </span>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.2">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    <span style={{ marginLeft: '.3rem' }}>Log out</span>
+                                </NavDropdown.Item>
                             </NavDropdown>
 
                         </Nav>

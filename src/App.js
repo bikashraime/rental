@@ -20,6 +20,7 @@ import Topbar from './components/Topbar.js';
 import { Navbar } from 'react-bootstrap';
 import { RentalCard } from './components/rental_card.js';
 import Profile from './pages/user_profile/profile.js';
+import Setting from './pages/user_setting/user_setting.js';
 
 
 function ScrollTop() {
@@ -39,10 +40,12 @@ const App = () => {
       <BrowserRouter className="main">
         <NavigationBar />
         <ScrollTop />
+
         <div className='expanded'>
           <Routes  >
             <Route path="/" element={<HomePage />} />
             <Route path='/profile' element={<Profile/>}></Route>
+            <Route path='/setting' element={<Setting/>}></Route>
             <Route exact path="/detail/:id/" element={<DetailPage />} />
             <Route exact path="/categories" element={<CategoryPage />} />
             <Route exact path='/aboutus' element={<AboutUs />} />
@@ -53,6 +56,7 @@ const App = () => {
           </Routes>
           <ScrollToTop className="scrollToTop" smooth color='#fff'/>
         </div>
+
         <Footer />
 
       </BrowserRouter>
