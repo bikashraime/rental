@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { RentalCard } from "../../components/rental_card";
 
 import Pagination from "react-js-pagination";
-import api from "../../utils/api";
+// import api from "../../utils/api";
 import Lottie from "lottie-react";
 import loadingAnimation from "../../assets/animations/loading.json";
 
@@ -18,32 +18,32 @@ export const SearchPage = (props) => {
     const [totalResults, setTotalResults] = useState("-");
     const [categories, setCaetgories] = useState([]);
 
-    useEffect(() => {
-        setLoading(true);
-        api.get(`api/search/${query}/`)
-            .then(resu => {
-                setLoading(false);
-                var result = resu.data;
-                console.log(result)
-                var list = [];
-                for (const i in result) {
-                    console.log(i)
-                    let res = result[i]
-                    list.push({
-                        id: res.id,
-                        image: res.image,
-                        name: res.name,
-                        location: res.location,
-                        area: "-",
-                        price: "Rs. " + res.price
-                    })
-                }
-                setCaetgories(list)
-            })
-    }, [query, page]);
-    if (loading) {
-        return (<Lottie animationData={loadingAnimation} loop />)
-    }
+    // useEffect(() => {
+    //     setLoading(true);
+    //     api.get(`api/search/${query}/`)
+    //         .then(resu => {
+    //             setLoading(false);
+    //             var result = resu.data;
+    //             console.log(result)
+    //             var list = [];
+    //             for (const i in result) {
+    //                 console.log(i)
+    //                 let res = result[i]
+    //                 list.push({
+    //                     id: res.id,
+    //                     image: res.image,
+    //                     name: res.name,
+    //                     location: res.location,
+    //                     area: "-",
+    //                     price: "Rs. " + res.price
+    //                 })
+    //             }
+    //             setCaetgories(list)
+    //         })
+    // }, [query, page]);
+    // if (loading) {
+    //     return (<Lottie animationData={loadingAnimation} loop />)
+    // }
 
     return (
         <Container className="my-3 py-3">

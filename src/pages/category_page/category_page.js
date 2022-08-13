@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from "react";
 import './category_page.css'
 import { Image, Card, Button, Container, Row, Col } from "react-bootstrap";
-import api, { mediaUrl } from '../../utils/api';
+// import api, { mediaUrl } from '../../utils/api';
 
 const CategoryCard = (props) => {
     const styles = {
@@ -36,22 +36,22 @@ const CategoryPage = () => {
     const [categories, setCaetgories] = useState([]);
 
 
-    useEffect(() => {
-        api.get(`api/categories/`)
-            .then(resu => {
-                var result = resu.data;
-                var list = [];
-                for (const i in result) {
-                    console.log(i)
-                    let res = result[i]
-                    list.push({
-                        cateName: res.name,
-                        catImage: mediaUrl + res.image,
-                    })
-                }
-                setCaetgories(list)
-            })
-    }, []);
+    // useEffect(() => {
+    //     api.get(`api/categories/`)
+    //         .then(resu => {
+    //             var result = resu.data;
+    //             var list = [];
+    //             for (const i in result) {
+    //                 console.log(i)
+    //                 let res = result[i]
+    //                 list.push({
+    //                     cateName: res.name,
+    //                     catImage: mediaUrl + res.image,
+    //                 })
+    //             }
+    //             setCaetgories(list)
+    //         })
+    // }, []);
 
     return (
         <div className='category-page animated fadeIn'>

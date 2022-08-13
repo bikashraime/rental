@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { RentalCard } from "../components/rental_card"
 import Lottie from "lottie-react";
 import loadingAnimation from "../assets/animations/loading.json";
-import api, {mediaUrl} from "../utils/api";
+// import api, {mediaUrl} from "../utils/api";
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -74,29 +74,29 @@ export const ViewAllPage = (props) => {
         },
     ]);
 
-    useEffect(() => {
-        setLoading(true);
-        api.get(`api/all/${pagename}/`)
-            .then(resu => {
-                setLoading(false);
-                var result = resu.data;
-                console.log(result)
-                var list = [];
-                for (const i in result) {
-                    console.log(i)
-                    let res = result[i]
-                    list.push({
-                        id: res.id,
-                        image: mediaUrl + res.image,
-                        name: res.name,
-                        location: res.location,
-                        area: "-",
-                        price: "Rs. " + res.price
-                    })
-                }
-                setDetail(list)
-            })
-    }, [pagename]);
+    // useEffect(() => {
+    //     setLoading(true);
+    //     api.get(`api/all/${pagename}/`)
+    //         .then(resu => {
+    //             setLoading(false);
+    //             var result = resu.data;
+    //             console.log(result)
+    //             var list = [];
+    //             for (const i in result) {
+    //                 console.log(i)
+    //                 let res = result[i]
+    //                 list.push({
+    //                     id: res.id,
+    //                     image: mediaUrl + res.image,
+    //                     name: res.name,
+    //                     location: res.location,
+    //                     area: "-",
+    //                     price: "Rs. " + res.price
+    //                 })
+    //             }
+    //             setDetail(list)
+    //         })
+    // }, [pagename]);
 
     if (loading) {
         return (<Lottie animationData={loadingAnimation} loop />)
