@@ -42,9 +42,7 @@ export const RentalCard = (props) => {
                         <span className="mx-2 rental-text">{practice ? data.price : props.obj.price}</span>
                     </span>
                 </div>
-
             </div>
-
         </>
     );
 }

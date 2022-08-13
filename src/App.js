@@ -39,7 +39,7 @@ const App = () => {
       <Topbar />
       <BrowserRouter className="main">
         <NavigationBar />
-        <ScrollTop />
+        {/* <ScrollTop /> */}
 
         <div className='expanded'>
           <Routes  >

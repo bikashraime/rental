@@ -17,6 +17,7 @@ import prev from '../assets/icons/prev.png';
 import next from '../assets/icons/next.png';
 import { Link } from 'react-router-dom';
 import { RentalCard } from './rental_card';
+import Categorylist from './category_list';
 
 function Slider(props) {
 

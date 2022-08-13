@@ -9,6 +9,7 @@ import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 
 export const NavigationBar = (props) => {
     const [toggleMenu, setToggleMenu] = useState(false)
+    const [loggedIn, setLoggedIn] = useState(true)
 
     const logoDesign = {
         filter: 'invert(100%)',
@@ -65,22 +66,29 @@ export const NavigationBar = (props) => {
 
                             <NavLink
                                 title='About Us'
-                                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} to='/aboutus'
+                                className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} 
+                                to='/aboutus'
                                 onClick={() => { setToggleMenu(false) }}
                             >
                                 <i class="fa-solid fa-circle-question"></i>
                             </NavLink>
                             <HashLink
                                 title='Contact'
-                                className="nav-link" to='/#contact'
+                                className="nav-link" 
+                                to='/#contact'
                                 smooth
                                 onClick={() => { setToggleMenu(false) }}
                                 scroll={(el) => scrollContactWithOffset(el)}
                             >
                                 <i class="fa-solid fa-address-book"></i>
                             </HashLink>
-                            <NavLink className="signup" to='/signup'>Signup / Login</NavLink>
-
+                            <NavLink  
+                                className="signup" 
+                                to='/signup'
+                                style={loggedIn? {display:'none'}:{display:'block'}}
+                             >
+                                Signup / Login
+                             </NavLink>
 
                             <NavDropdown
                                 title={
@@ -89,6 +97,7 @@ export const NavigationBar = (props) => {
                                     </span>
                                 }
                                 id="basic-nav-dropdown"
+                                style={loggedIn? {display:'block'}:{display:'none'}}
                             >
                                 <NavDropdown.Item href="#action/3.1">
                                     <Link to='/profile' style={{ textDecoration: 'none', color: 'inherit' }}>Profile</Link>
@@ -102,7 +111,13 @@ export const NavigationBar = (props) => {
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">
                                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                    <span style={{ marginLeft: '.3rem' }}>Log out</span>
+                                    <NavLink 
+                                        to='/' 
+                                        onClick={()=>setLoggedIn(false)}
+                                        style={{ marginLeft: '.3rem', textDecoration:'none', color:'inherit'}}
+                                    >
+                                        Log out
+                                    </NavLink>
                                 </NavDropdown.Item>
                             </NavDropdown>
 
