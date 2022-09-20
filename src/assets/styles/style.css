@@ -8,9 +8,9 @@ html {
     scroll-behavior: smooth;
 }
 
-.testingfunction{
+.testingfunction {
     /* background-color: red; */
-    max-width: fit-content ;
+    max-width: fit-content;
 }
 
 
@@ -249,7 +249,8 @@ li>a:hover {
     border-left: black solid 2px;
     padding-left: 20px;
 }
-.footer-logo a{
+
+.footer-logo a {
     margin-right: 0.5rem;
 }
 
@@ -257,7 +258,7 @@ li>a:hover {
 
 .contact-bg {
     /* background-image: url('../images//banner.jpeg'); */
-    background: linear-gradient(0deg, rgba(45, 45, 45, 0.2), rgba(45, 45, 45, 0.2)), url('../images//contact-bg.png');
+    background: linear-gradient(0deg, rgba(45, 45, 45, 0.2), rgba(45, 45, 45, 0.2)), url('../images/contact-bg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

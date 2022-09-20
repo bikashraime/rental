@@ -1,0 +1,12 @@
+
+.viewall-title{
+    font-size: 3rem;
+}
+.viewall-detail{
+    font-size: 1.25rem;
+}
+
+.viewall-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}

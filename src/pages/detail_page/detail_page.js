@@ -53,13 +53,14 @@ function DetailPage(props) {
     // }, [id]);
 
 
-    if (loading) {
-        return (<Lottie animationData={loadingAnimation} loop />)
-    }
-    console.log(detail)
+    // if (loading) {
+    //     return (<Lottie animationData={loadingAnimation} loop />)
+    // }
+    // console.log(detail)
 
     return (
         <div className='animated slideUp'>
+            hello
             <div className={lightbox ? css.lightbox : css.lightbox2}>
                 <div className='animated fadeIn'>
                     <img src={currentImg} alt='current image' />
