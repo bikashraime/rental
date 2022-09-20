@@ -1,6 +1,6 @@
 import React from 'react'
 import './view_all_page.css'
-import { RentalCard } from '../../../components/rental_card'
+import { RentalCard } from '../../components/rental_card'
 
 export default function ViewAll(props) {
     let card_collection = []
