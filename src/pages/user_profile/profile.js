@@ -1,5 +1,5 @@
 import React from 'react'
-import { RentalCard } from '../../components/rental_card'
+import { RentalCard } from '../rental_card/rental_card'
 import './profile.css'
 import Tom from './tom.jpeg'
 
@@ -35,6 +35,7 @@ function Profile() {
                     </div>
                     <div className="cards" style={{ margin: '1rem 0' }}>
                         <RentalCard />
+                        <RentalCard/>
                         <RentalCard />
                         <RentalCard />
                         <RentalCard />

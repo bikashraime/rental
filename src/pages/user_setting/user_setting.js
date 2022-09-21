@@ -1,7 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { RentalCard } from '../../components/rental_card'
 import UserDetail from './sections/user_detail'
 import UserPassword from './sections/user_password'
 import './user_setting.css'

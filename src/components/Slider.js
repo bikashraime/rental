@@ -16,7 +16,7 @@ import { Container, Row } from 'react-bootstrap';
 import prev from '../assets/icons/prev.png';
 import next from '../assets/icons/next.png';
 import { Link } from 'react-router-dom';
-import { RentalCard } from './rental_card';
+import { RentalCard } from '../pages/rental_card/rental_card';
 
 function Slider(props) {
 

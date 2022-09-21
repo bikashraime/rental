@@ -13,7 +13,6 @@ html {
     max-width: fit-content;
 }
 
-
 .main {
     min-height: 100vh;
     display: flex;
@@ -195,32 +194,6 @@ a.viewall-text:hover {
     border-radius: 10px;
     height: 100%;
     width: 100%;
-}
-
-
-.rental-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding-bottom: 10px;
-    box-shadow: 0px 0px 4px var(--hover-color);
-
-}
-
-.rental-card:hover {
-    background-color: var(--hover-color);
-}
-
-.rental-image {
-    object-fit: cover;
-    width: 100%;
-    border-radius: 10px 10px 0px 0px;
-}
-
-.rental-text {
-    text-decoration: none !important;
-    color: #000;
-    font-size: .9rem;
-
 }
 
 .footer-title {
