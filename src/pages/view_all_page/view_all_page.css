@@ -1,4 +1,6 @@
-
+.viewall-header{
+    padding-top: 1rem;
+}
 .viewall-title{
     font-size: 3rem;
 }
@@ -9,4 +11,21 @@
 .viewall-grid{
     display: grid;
     grid-template-columns: auto auto auto auto;
+}
+@media(max-width: 1120px ){
+    .viewall-grid{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media(max-width: 860px ){
+    .viewall-grid{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media(max-width: 560px ){
+    .viewall-grid{
+        grid-template-columns: auto;
+    }
 }
