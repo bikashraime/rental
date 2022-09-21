@@ -15,10 +15,12 @@
     /* border: 1px solid #7d7c7c; */
     background-color: white;
 }
+
 .category-list-component:hover {
     background-color: rgba(159, 159, 159, 0.746);
 }
-.category-list-component-navlink{
+
+.category-list-component-navlink {
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -27,7 +29,7 @@
     align-items: center;
     line-height: 2.1rem;
 }
-.category-list-component-navlink:hover{
+
+.category-list-component-navlink:hover {
     color: white;
 }
-
