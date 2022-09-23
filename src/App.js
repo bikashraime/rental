@@ -15,6 +15,7 @@ import Profile from './pages/user_profile/profile.js';
 import Setting from './pages/user_setting/user_setting.js';
 import ViewAll from './pages/view_all_page/view_all_page.js';
 import { useParams } from 'react-router-dom';
+import UserDropdown from './pages/user_dropdown/user_dropdown.js';
 
 
 function ScrollTop() {
@@ -35,6 +36,7 @@ const App = () => {
       <Topbar />
       <BrowserRouter className="main">
         <NavigationBar />
+        <UserDropdown />
         <ScrollTop />
 
         <div className='expanded'>
@@ -45,9 +47,9 @@ const App = () => {
             <Route exact path="/detail/:id/" element={<DetailPage />} />
             <Route exact path='/aboutus' element={<AboutUs />} />
             <Route path='/viewall'>
-              <Route path='room' element={<ViewAll title='Room'/>}/>
-              <Route path='apartment' element={<ViewAll title='Flats & Apartments'/>}/>
-              <Route path='house' element={<ViewAll title='House'/>}/>
+              <Route path='room' element={<ViewAll title='Room' />} />
+              <Route path='apartment' element={<ViewAll title='Flats & Apartments' />} />
+              <Route path='house' element={<ViewAll title='House' />} />
             </Route>
             <Route exact path="/signup" element={<Signup />} />
             <Route path="*" element={<NotFoundPage />} />
