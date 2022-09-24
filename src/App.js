@@ -16,6 +16,7 @@ import Setting from './pages/user_setting/user_setting.js';
 import ViewAll from './pages/view_all_page/view_all_page.js';
 import { useParams } from 'react-router-dom';
 import UserDropdown from './pages/user_dropdown/user_dropdown.js';
+import Navbar1 from './pages/navbar/navbar1.js';
 
 
 function ScrollTop() {
@@ -35,8 +36,9 @@ const App = () => {
     <div className='main'>
       <Topbar />
       <BrowserRouter className="main">
-        <NavigationBar />
-        <UserDropdown />
+        <Navbar1 />
+        {/* <div style={{height:'2rem'}}></div>
+        <NavigationBar /> */}
         <ScrollTop />
 
         <div className='expanded'>

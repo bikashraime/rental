@@ -1,0 +1,94 @@
+.navbar-main {
+    background-color: #F4F4F4;
+}
+
+.navbar-content {
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-content-logo {
+    filter: invert(1);
+    height: 6rem;
+    margin: -.3rem -1rem;
+}
+
+.navbar-content-logo:hover {
+    filter: invert(.4);
+}
+
+.navbar-menu {
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu>* {
+    margin-left: 1.6rem;
+}
+
+.navbar-home {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.1rem;
+}
+
+.navbar-home:hover {
+    color: inherit;
+}
+
+.navbar-postad,
+.navbar-signup {
+
+    color: white !important;
+    border: 1px solid white;
+    border-radius: .5rem;
+    background-color: #435359;
+    padding: 10px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.navbar-postad:hover,
+.navbar-signup:hover {
+    background-color: rgb(112, 112, 112);
+}
+
+.navbar-user {
+    position: relative;
+}
+
+.navbar-user:hover .navbar-user-dropdown {
+    display: block;
+}
+
+.navbar-user-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    top: 2.6rem;
+}
+
+.navbar-user-dropdown:hover {
+    display: block;
+}
+
+.navbar-user-button {
+    border: none;
+    background-color: transparent;
+    display: flex !important;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.navbar-user-icon {
+    background-color: #bfc2c6;
+    color: white;
+    padding: .4rem;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
