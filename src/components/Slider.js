@@ -24,8 +24,8 @@ function Slider(props) {
 
    
     return (
-        <Container>
-            <div style={{ height: 50, width: "100%"}} />
+        <Container style={{ marginTop: '3rem'}}>
+            {/* <div style={{ height: 50, width: "100%"}} /> */}
             <div className="d-flex flex-row justify-content-between align-items-center">
                 <h2 className='d-inline'>{props.title}</h2>
                 <Link to={props.goto} class="text-decoration-none viewall-text" >

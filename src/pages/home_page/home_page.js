@@ -7,7 +7,7 @@ import SearchPage from '../search_page/search_page.js';
 export const HomePage = () => {
 
     return (
-        <div className='animated fadeIn'>
+        <div className='fadeIn'>
             <SearchPage />
             <Categorylist1 />
 

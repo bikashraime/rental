@@ -19,14 +19,6 @@ html {
     flex-direction: column;
 }
 
-.sticky-navbar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #313539;
-}
-
 .signup {
     color: white !important;
     border: 1px solid white;
@@ -126,7 +118,7 @@ a:hover>img {
 
 
 a.viewall-text {
-    font-size: 11px;
+    font-size: .9rem;
     color: #000;
 }
 
@@ -308,7 +300,7 @@ li>a:hover {
 
 @keyframes slideUpAnimation {
     0% {
-        transform: translateY(10%);
+        transform: translateY(4%);
     }
 
     100% {

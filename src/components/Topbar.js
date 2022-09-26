@@ -3,9 +3,9 @@ import '../assets/styles/Topbar.css'
 
 function Topbar() {
     return (
-        <div className='topbar d-flex justify-content-center align-items-center'>
-            <div className="container d-flex justify-content-between">
-                <div className="topbar-contact d-flex justify-content">
+        <div className='topbar'>
+            <div className="container topbar-container">
+                <div className="topbar-contact">
                     <div className='d-flex align-items-center'>
                         <i class="fa-regular fa-envelope"></i>
                         <span>abcde@gmail.com</span>

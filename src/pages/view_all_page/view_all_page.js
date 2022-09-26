@@ -46,7 +46,7 @@ export default function ViewAll(props) {
         };
 
         return (
-            <>
+            <div className='fadeIn slideUp'>
                 <Items currentItems={currentItems} />
                 <ReactPaginate
                     breakLabel="..."
@@ -69,7 +69,7 @@ export default function ViewAll(props) {
                     activeClassName="active"
                     className='pagination'
                 />
-            </>
+            </div>
         );
     }
 

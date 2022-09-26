@@ -24,6 +24,8 @@ function ScrollTop() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    // console.log("home window scroll up activated")
+    // console.log(pathname)
   }, [pathname]);
 
   return null;

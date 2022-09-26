@@ -5,8 +5,15 @@
     border-bottom: 1px solid #eee;
     font-size: 14px;
 }
+.topbar-container{
+    display: flex;
+    justify-content: space-between;
+}
 .topbar-contact{
     /* border: 3px solid yellow; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5rem;
 }
 .topbar-contact div{
     margin-right: 1rem;
@@ -16,4 +23,9 @@
 }
 .topbar-logos a{
     margin-left: 0.5rem;
+}
+@media (max-width: 450px) {
+    .topbar-container{
+        flex-direction: column;
+    }
 }
