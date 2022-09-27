@@ -1,6 +1,6 @@
 .search-area {
     /* border: 1px solid red; */
-    height: 60vh;
+    height: 38rem;
     background: linear-gradient(90deg, rgba(0,0,0,0.8673670151654411) 0%, rgba(46,46,46,0.814145726650035) 49%, rgba(255,254,254,0) 83%),url('../../assets/images/search_area_background.jpg'); 
     background-repeat: no-repeat;
     background-position: 50% 60%;
@@ -46,8 +46,11 @@
 }
 
 @media(max-width: 500px ){
+    .search-area{
+        height: 35rem;
+    }
     .search-area .container {
-        padding-top: 6rem;
+        padding-top: 7rem;
     }
     .search-area-slogan-big {
         font-weight: 500;
