@@ -15,7 +15,7 @@
 .search-area-slogan-big {
     color: white;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 1;
 }
 .search-area-slogan-small {
@@ -26,7 +26,7 @@
 .search-area-input{
     /* border: 1px solid rgb(3, 247, 255); */
     width: fit-content;
-    background-color: white;
+    background-color:white;
     margin-top: 3rem;
     border-radius: 1rem;
     overflow: hidden;
@@ -35,11 +35,22 @@
 .search-area-input input{
     border: none;
     outline: none;
+    width: 100%;
     height: 3rem;
-    width: 30rem;
     margin-left: 1rem;
 }
 .search-area-input button{
     background: none;
     border: none;
+    margin: 0 .5rem;
+}
+
+@media(max-width: 500px ){
+    .search-area .container {
+        padding-top: 6rem;
+    }
+    .search-area-slogan-big {
+        font-weight: 500;
+        font-size: 3.5rem;
+    }
 }

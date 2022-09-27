@@ -3,6 +3,7 @@
     margin-top: 1rem;
     border-radius: 5px;
     /* background-color: #F4F4F4; */
+    /* border: 1px solid red; */
 
     display: flex;
     justify-content: space-between;
@@ -32,4 +33,17 @@
 
 .category-list-component-navlink:hover {
     color: white;
+}
+
+@media(max-width: 1000px) {
+    .category-list {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+}
+@media(max-width: 600px) {
+    .category-list {
+        grid-template-columns:  auto  auto auto;
+        justify-content: space-evenly;
+    }
 }

@@ -15,7 +15,7 @@ root.render(
   <React.StrictMode>
     {/* <Test/> */}
     
-    <App />?
+    <App />
   </React.StrictMode>
 );
 
