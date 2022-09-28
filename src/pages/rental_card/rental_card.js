@@ -1,27 +1,22 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import { useRef } from "react";
+import { useState, useEffect } from "react";
 import testImage from '../../assets/images/banner-1.jpeg'
 import './rental_card.css'
 
 export const RentalCard = (props) => {
 
-    const ref = useRef(null);
+    const [trash, setTrash] = useState(false)
 
-    // const [width, setWidth] = useState(0);
 
-    // const getSize = () => {
-    //     if (ref.current) {
-    //         setWidth(ref.current.offsetWidth)
-    //     }
-    // }
-    // useEffect(() => {
-    //     getSize();
-    // }, [])
 
-    // useEffect(() => {
-    //     window.addEventListener('resize', getSize)
-    // })
+    useEffect(() => {
+        console.log("useEffect is runing")
+        if (props.trash) {
+            setTrash(true)
+        }
+        console.log("Props is checked")
+    },[])
+
+
 
     // For testing
     const data = {
@@ -34,10 +29,17 @@ export const RentalCard = (props) => {
 
     return (
         <>
-            <div ref={ref} className="rental-card">
+            <div className="rental-card">
                 <img className="rental-image" src={practice ? testImage : props.obj.image} height={205} alt="Image" />
                 <div className="rental-card-detail">
-                    <div className="rental-text-id">ID: {practice ? data.id : props.obj.name}</div>
+                    <div className="rental-text-id">
+                        <span>
+                            ID: {practice ? data.id : props.obj.name}
+                        </span>
+                        <span style={trash ? { display: 'block' } : { display: 'none' }} >
+                            <i id="rental-card-delete" class="fa-solid fa-trash"></i>
+                        </span>
+                    </div>
                     <div className="rental-text-title">{practice ? data.intro : props.obj.name}</div>
                     <div className="rental-text-address">
                         <i class="fa-solid fa-location-dot fa-lg"></i>

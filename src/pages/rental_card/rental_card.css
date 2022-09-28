@@ -31,7 +31,10 @@
 }
 
 .rental-text-id {
+    /* border: 1px solid red; */
     font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .rental-text-title {
@@ -54,5 +57,8 @@
     font-weight: bold;
     color: rgba(0, 164, 228);
     margin: .5rem 0;
+}
 
+#rental-card-delete:hover{
+    color: red;
 }

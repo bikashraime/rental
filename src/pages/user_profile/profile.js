@@ -39,11 +39,11 @@ function Profile() {
                         {/* <i class="fa-solid fa-plus"></i> */}
                     </div>
                     <div className="cards" style={{ margin: '1rem 0' }}>
-                        <RentalCard />
-                        <RentalCard />
-                        <RentalCard />
-                        <RentalCard />
-                        <RentalCard />
+                        <RentalCard trash={true}/>
+                        <RentalCard trash={true}/>
+                        <RentalCard trash={true}/>
+                        <RentalCard trash={true}/>
+                        <RentalCard trash={true}/>
                     </div>
                 </div>
             </div>
