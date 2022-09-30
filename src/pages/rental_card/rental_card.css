@@ -6,7 +6,6 @@
     margin: 5px;
     min-width: 250px;
     max-width: 600px;
-
 }
 
 .rental-card:hover {
@@ -38,9 +37,11 @@
 }
 
 .rental-text-title {
+    /* border: 1px solid red; */
+    min-height: 3rem;
     font-weight: bolder;
     font-size: 1.1rem;
-    margin: .5rem 0;
+    margin-top: .5rem;
 }
 
 .rental-text-title:hover {
@@ -48,8 +49,13 @@
 }
 
 .rental-text-address {
+    /* border: 1px solid red; */
+    height: fit-content;
     font-size: 1rem;
     color: rgb(112, 104, 104);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .rental-text-price {
@@ -59,6 +65,26 @@
     margin: .5rem 0;
 }
 
-#rental-card-delete:hover{
+#rental-card-delete:hover {
     color: red;
 }
+
+.rental-indicator {
+    /* background-color: #5fc95f; */
+    color: white;
+    width: 4rem;
+    font-weight: bolder;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    padding: .2rem 0;
+    text-align: center;
+}
+
+/* .rental-indicator-sell{
+    background-color: #ec6345;
+    color: white;
+    width: 5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: .2rem;
+} */

@@ -9,7 +9,7 @@ function Profile() {
 
     let card_list = []
     for (let i = 0; i <= 7; i++) {
-        card_list.push(<RentalCard trash={true} />)
+        card_list.push(<RentalCard admin={true} />)
     }
 
     return (

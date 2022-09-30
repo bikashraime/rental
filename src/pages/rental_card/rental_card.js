@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import testImage from '../../assets/images/banner-1.jpeg'
+import restaurent from '../../assets/images/restaurent.jpg'
+import shop from '../../assets/images/clothes.jpg'
 import './rental_card.css'
 
 export const RentalCard = (props) => {
 
-    const [trash, setTrash] = useState(false)
-
-
+    const [admin, setAdmin] = useState(false)
 
     useEffect(() => {
         // console.log("useEffect is runing")
-        if (props.trash) {
-            setTrash(true)
+        if (props.admin) {
+            setAdmin(true)
         }
         // console.log("Props is checked")
     }, [])
@@ -19,33 +19,64 @@ export const RentalCard = (props) => {
 
 
     // For testing
-    const data = {
-        id: '002',
-        intro: 'House for Sale and we will be happy to welcome you',
-        location: 'Dharan',
-        price: '20,00,00,000'
-    }
-    const practice = true;
+    const data_sample = [
+        {
+            id: '002',
+            img: testImage,
+            intro: 'House for Sale and we will be happy to welcome you',
+            location: 'Dharan',
+            rent: true,
+            price: '20,00,00,000'
+        },
+        {
+            id: '4353',
+            img: restaurent,
+            intro: 'Restaurent for Sale',
+            location: 'Biratnangar',
+            rent: false,
+            price: '100,00,000'
+        },
+        {
+            id: '3592',
+            img: shop,
+            intro: 'Clothes shop for sale ',
+            location: 'Itahari',
+            rent: false,
+            price: '25,00,000'
+        }
+    ]
+
+
+    let data = data_sample[Math.floor(Math.random() * 3)];
+    let indicator = data.rent ? <div className="rental-indicator" style={{ backgroundColor: '#5fc95f' }}>Rent</div>
+        : <div className="rental-indicator" style={{ backgroundColor: '#ec6345' }}>Sell</div>
 
     return (
         <>
             <div className="rental-card">
-                <img className="rental-image" src={practice ? testImage : props.obj.image} height={205} alt="Image" />
+                <img className="rental-image" src={data.img} height={205} alt="Image" />
                 <div className="rental-card-detail">
                     <div className="rental-text-id">
                         <span>
-                            ID: {practice ? data.id : props.obj.name}
+                            ID: {data.id}
                         </span>
-                        <span style={trash ? { display: 'block' } : { display: 'none' }} >
-                            <i id="rental-card-delete" class="fa-solid fa-trash"></i>
+                        <span style={admin ? { display: 'block' } : { display: 'none' }} >
+                            <i class="fa-solid fa-ellipsis-vertical" style={{ padding: '0 .5rem', marginRight: '.5rem' }} title="Edit"></i>
+                            <i id="rental-card-delete" class="fa-solid fa-trash" title="Delete Ad"></i>
                         </span>
                     </div>
-                    <div className="rental-text-title">{practice ? data.intro : props.obj.name}</div>
+                    <div className="rental-text-title">{data.intro}</div>
+
+
                     <div className="rental-text-address">
-                        <i class="fa-solid fa-location-dot fa-lg"></i>
-                        <span className="mx-2">{practice ? data.location : props.obj.location}</span>
+                        <div>
+                            <i class="fa-solid fa-location-dot fa-lg"></i>
+                            <span className="mx-2">{data.location}</span>
+                        </div>
+                        {indicator}
                     </div>
-                    <div className="rental-text-price">Rs. {practice ? data.price : props.obj.price}</div>
+
+                    <div className="rental-text-price">Rs. {data.price}</div>
 
                     {/* <div>Width: {width}</div> */}
                 </div>
