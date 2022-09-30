@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import testImage from '../../assets/images/banner-1.jpeg'
+import house from '../../assets/images/banner-1.jpeg'
 import restaurent from '../../assets/images/restaurent.jpg'
 import shop from '../../assets/images/clothes.jpg'
+import room from '../../assets/images/room.jpg'
+import apartment from '../../assets/images/apartment.jpg'
 import './rental_card.css'
 
 export const RentalCard = (props) => {
@@ -22,7 +24,7 @@ export const RentalCard = (props) => {
     const data_sample = [
         {
             id: '002',
-            img: testImage,
+            img: house,
             intro: 'House for Sale and we will be happy to welcome you',
             location: 'Dharan',
             rent: true,
@@ -39,15 +41,31 @@ export const RentalCard = (props) => {
         {
             id: '3592',
             img: shop,
-            intro: 'Clothes shop for sale ',
+            intro: 'Clothes shop for sale. A well established shop with branded items and good customer flow ',
             location: 'Itahari',
             rent: false,
             price: '25,00,000'
+        },
+        {
+            id: '9834',
+            img: room,
+            intro: 'One room for rent',
+            location: 'Kathmandu',
+            rent: true,
+            price: '7,000'
+        },
+        {
+            id: '5645',
+            img: apartment,
+            intro: 'Luxurious apartment for sale',
+            location: 'Bhaktapur',
+            rent: false,
+            price: '35,50,000'
         }
     ]
 
 
-    let data = data_sample[Math.floor(Math.random() * 3)];
+    let data = data_sample[Math.floor(Math.random() * 5)];
     let indicator = data.rent ? <div className="rental-indicator" style={{ backgroundColor: '#5fc95f' }}>Rent</div>
         : <div className="rental-indicator" style={{ backgroundColor: '#ec6345' }}>Sell</div>
 
@@ -66,7 +84,6 @@ export const RentalCard = (props) => {
                         </span>
                     </div>
                     <div className="rental-text-title">{data.intro}</div>
-
 
                     <div className="rental-text-address">
                         <div>
