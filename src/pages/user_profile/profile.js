@@ -4,7 +4,14 @@ import { RentalCard } from '../rental_card/rental_card'
 import './profile.css'
 import Tom from './tom.jpeg'
 
+
 function Profile() {
+
+    let card_list = []
+    for (let i = 0; i <= 7; i++) {
+        card_list.push(<RentalCard trash={true} />)
+    }
+
     return (
         <div className="user-profile fadeIn">
             <div className="container">
@@ -29,7 +36,7 @@ function Profile() {
                     <Link to='/setting'>
                         <button class="btn btn-outline-secondary" style={{ margin: '1rem 0' }}>Edit Profile</button>
                     </Link>
-                    <button class="btn btn-outline-secondary">Post Ad</button>
+                    <button class="btn btn-outline-secondary" style={{width:'6.9rem'}}>Post Ad</button>
 
                 </div>
 
@@ -39,11 +46,7 @@ function Profile() {
                         {/* <i class="fa-solid fa-plus"></i> */}
                     </div>
                     <div className="cards" style={{ margin: '1rem 0' }}>
-                        <RentalCard trash={true}/>
-                        <RentalCard trash={true}/>
-                        <RentalCard trash={true}/>
-                        <RentalCard trash={true}/>
-                        <RentalCard trash={true}/>
+                        {card_list}
                     </div>
                 </div>
             </div>

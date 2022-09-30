@@ -10,7 +10,7 @@ function Setting() {
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-        console.log("setting page is opened!!!")
+        // console.log("setting page is opened!!!")
     }, [])
 
     const [option, setOption] = useState(1)
@@ -23,12 +23,12 @@ function Setting() {
             <div className="container">
                 <div className="setting-title" >
                     <span style={{ fontSize: '1.6rem', fontWeight: '500' }}>Setting</span>
-                    <div style={{ borderBottom: '1px solid #bebebe' }}></div>
-                    <div>
+                    <div style={{ borderBottom: '1px solid #bebebe', marginBottom: '.3rem' }}></div>
+                    <div className='setting-option'>
                         <i class="fa-solid fa-person"></i>
                         <span onClick={() => setOption(1)}>My Detail</span>
                     </div>
-                    <div>
+                    <div className='setting-option'>
                         <i class="fa-solid fa-key"></i>
                         <span onClick={() => setOption(2)}>Password</span>
                     </div>

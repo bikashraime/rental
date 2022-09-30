@@ -9,12 +9,12 @@ export const RentalCard = (props) => {
 
 
     useEffect(() => {
-        console.log("useEffect is runing")
+        // console.log("useEffect is runing")
         if (props.trash) {
             setTrash(true)
         }
-        console.log("Props is checked")
-    },[])
+        // console.log("Props is checked")
+    }, [])
 
 
 
