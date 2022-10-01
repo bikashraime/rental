@@ -1,4 +1,5 @@
-.delete-confirmation , .delete-confirmed{
+.delete-confirmation,
+.delete-confirmed {
     border-radius: 6px;
     width: 24rem;
     height: 20rem;
@@ -6,7 +7,8 @@
     padding: 2rem;
 }
 
-.delete-confirmation>div , .delete-confirmed>div{
+.delete-confirmation>div,
+.delete-confirmed>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +32,7 @@
 
 .delete-confimation-btn>button {
     width: 7rem;
-    padding: 6px;
+    padding: 8px;
     border-radius: 3px;
     border: none;
     color: white;
@@ -50,4 +52,20 @@
 
 .delete-confimation-btn2:hover {
     background-color: #fa8c8c;
+}
+
+@media(max-width:390px) {
+    .delete-confirmation,
+    .delete-confirmed {
+        width: 100%;
+        height: auto;
+    }
+
+    .delete-confimation-btn {
+        flex-direction: column;
+    }
+
+    .delete-confimation-btn1 {
+        margin-bottom: .5rem;
+    }
 }
