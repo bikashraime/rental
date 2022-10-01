@@ -5,6 +5,7 @@ import shop from '../../assets/images/clothes.jpg'
 import room from '../../assets/images/room.jpg'
 import apartment from '../../assets/images/apartment.jpg'
 import './rental_card.css'
+import DeleteModal from "./sections/delete_modal";
 
 export const RentalCard = (props) => {
 
@@ -17,6 +18,8 @@ export const RentalCard = (props) => {
         }
         // console.log("Props is checked")
     }, [])
+
+    const [showModal, setShowModal] = useState(false)
 
 
 
@@ -71,6 +74,7 @@ export const RentalCard = (props) => {
 
     return (
         <>
+            <DeleteModal showModal={showModal} setShowModal={setShowModal}/>
             <div className="rental-card">
                 <img className="rental-image" src={data.img} height={205} alt="Image" />
                 <div className="rental-card-detail">
@@ -80,7 +84,7 @@ export const RentalCard = (props) => {
                         </span>
                         <span style={admin ? { display: 'block' } : { display: 'none' }} >
                             <i class="fa-solid fa-ellipsis-vertical" style={{ padding: '0 .5rem', marginRight: '.5rem' }} title="Edit"></i>
-                            <i id="rental-card-delete" class="fa-solid fa-trash" title="Delete Ad"></i>
+                            <i onClick={()=>setShowModal(true)} id="rental-card-delete" class="fa-solid fa-trash" title="Delete Ad"></i>
                         </span>
                     </div>
                     <div className="rental-text-title">{data.intro}</div>

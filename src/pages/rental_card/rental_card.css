@@ -39,7 +39,7 @@
 .rental-text-title {
     /* border: 1px solid blue; */
     font-weight: bolder;
-    margin-top: .2rem;
+    margin: .1rem 0;
     font-size: 1.2rem;
     text-align: justify;
     overflow: hidden;
