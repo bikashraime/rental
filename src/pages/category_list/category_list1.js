@@ -31,7 +31,7 @@ export default function Categorylist1() {
 
     return (
         <>
-            <div className='container category-list'>
+            <div className='container category-list' id='category1'>
                 {list_jsx}
             </div>
         </>

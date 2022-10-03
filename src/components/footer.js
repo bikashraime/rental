@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { scrollContactWithOffset } from '../utils/scroll_offset';
+import Snackbar from './snackbar/snackbar';
 
 function Footer() {
+    //Toast
+    const [toast, setToast] = useState(false)
+    function toasting() {
+        setToast(true)
+        setTimeout(() => {
+            setToast(false)
+        }, 1000)
+    }
+    // {toast && <Snackbar />}
     return (
         <div className='footer py-3' style={{ backgroundColor: "#F4F4F4" }} >
+            {toast && <Snackbar />}
+
             <Container style={{ paddingTop: "30px", paddingBottom: "10px" }} >
                 <Row>
                     <Col className='d-flex justify-content-center' sm={6} md={4} xs={12} style={{ marginBottom: 30 }}>
@@ -32,7 +44,7 @@ function Footer() {
                                             <HashLink to='/#contact' scroll={(el) => scrollContactWithOffset(el)} ><span>CONTACT US</span></HashLink>
                                         </li>
                                         <li className='bottom-nab'>
-                                            <Link to='/aboutus'><span>DEVELOPERS</span></Link>
+                                            <Link to='*' onClick={toasting}><span>DEVELOPERS</span></Link>
                                         </li>
                                     </div>
                                 </div>

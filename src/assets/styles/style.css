@@ -290,9 +290,6 @@ li>a:hover {
 .slideDown{
     animation: slideDownAnimation ease 500ms, fadeInAnimation ease 500ms;
 }
-.slideLeft{
-    animation: slideLeftAnimation linear 500ms;
-}
 
 @keyframes fadeInAnimation {
     0% {
@@ -320,14 +317,6 @@ li>a:hover {
     }
     100%{
         transform: translateY(0%);
-    }
-}
-@keyframes slideLeftAnimation{
-    0%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(0);
     }
 }
 

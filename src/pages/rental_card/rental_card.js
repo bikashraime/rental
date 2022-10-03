@@ -6,6 +6,7 @@ import room from '../../assets/images/room.jpg'
 import apartment from '../../assets/images/apartment.jpg'
 import './rental_card.css'
 import DeleteModal from "./sections/delete_modal";
+import Snackbar from "../../components/snackbar/snackbar";
 
 export const RentalCard = (props) => {
 
@@ -72,8 +73,20 @@ export const RentalCard = (props) => {
     let indicator = data.rent ? <div className="rental-indicator" style={{ backgroundColor: '#5fc95f' }}>Rent</div>
         : <div className="rental-indicator" style={{ backgroundColor: '#ec6345' }}>Sell</div>
 
+
+
+    //Toast
+    const [toast, setToast] = useState(false)
+    function toasting() {
+        setToast(true)
+        setTimeout(() => {
+            setToast(false)
+        }, 1000)
+    }
+    // {toast && <Snackbar />}
     return (
         <>
+            {toast && <Snackbar />}
             <div className="rental-card">
                 <DeleteModal showModal={showModal} setShowModal={setShowModal} />
 
@@ -84,7 +97,7 @@ export const RentalCard = (props) => {
                             ID: {data.id}
                         </span>
                         <span style={admin ? { display: 'block' } : { display: 'none' }} >
-                            <i class="fa-solid fa-ellipsis-vertical" style={{ padding: '0 .5rem', marginRight: '.5rem' }} title="Edit"></i>
+                            <i onClick={toasting} class="fa-solid fa-ellipsis-vertical" style={{ padding: '0 .5rem', marginRight: '.5rem' }} title="Edit"></i>
                             <i onClick={() => setShowModal(true)} id="rental-card-delete" class="fa-solid fa-trash" title="Delete Ad"></i>
                         </span>
                     </div>

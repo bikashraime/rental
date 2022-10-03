@@ -39,8 +39,6 @@ const App = () => {
 			<Topbar />
 			<BrowserRouter className="main">
 				<Navbar1 />
-				{/* <div style={{height:'2rem'}}></div>
-        <NavigationBar /> */}
 				<ScrollTop />
 
 				<div className='expanded'>
