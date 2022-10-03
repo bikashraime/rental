@@ -12,9 +12,12 @@ import CategoryDropdown from './category_dropdown/category_dropdown'
 export default function Navbar1() {
 
     //Menu bar toggle
-    const [menu, setMenu] = useState(true);
+    const [menu, setMenu] = useState(false);
     const toggleMenu = () => {
         setMenu(!menu);
+        console.log("menu toggle button is pressed")
+        menu? console.log("menu is on")
+            : console.log("menu is off")
     }
     const widthResponse = () => {
         if (window.innerWidth > 1010) {
@@ -25,6 +28,7 @@ export default function Navbar1() {
     }
     useEffect(() => {
         widthResponse();
+        console.log("width response for meanu is run")
     }, [])
     useEffect(() => {
         window.addEventListener('resize', widthResponse)
@@ -85,11 +89,11 @@ export default function Navbar1() {
                     <div className="container navbar-content">
                         <Link to='/'><img src={logo} className='navbar-content-logo' /></Link>
 
-                        <div ref={refOne} onClick={() => widthResponse()} className="navbar-menu" style={menu ? { display: 'flex' } : { display: 'none' }}>
+                        <div ref={refOne} onClick={() => widthResponse()} className="navbar-menu" style={menu ? { display: 'flex' } : { display: 'none', animation: 'slideLeftAnimationClose linear 200ms' }}>
                             <Link to='/' className='navbar-home'>HOME</Link>
                             <div ref={refThree} style={{ position: 'relative' }} >
                                 <button onClick={() => setCategoryDropdown(!categoryDropdown)} className='navbar-home'>CATEGORY</button>
-                                <div className='navbar-category-dropdown' style={categoryDropdown ? { display: 'block' } : { display: 'none' }} onClick={() => setCategoryDropdown(false)}>
+                                <div className='navbar-category-dropdown slideDown' style={categoryDropdown ? { display: 'block', opacity: '1', transition: 'opacity 4s ease' } : { display: 'none' }} onClick={() => setCategoryDropdown(false)}>
                                     <CategoryDropdown />
                                 </div>
 
@@ -110,7 +114,7 @@ export default function Navbar1() {
                                     </div>
                                     <div className='navbar-user-name'>User</div>
                                 </button>
-                                <div onClick={() => setNavbarUser(false)} className='navbar-user-dropdown' style={{ display: navbarUser ? 'block' : 'none' }}>
+                                <div onClick={() => setNavbarUser(false)} className='navbar-user-dropdown slideDown' style={{ display: navbarUser ? 'block' : 'none' }}>
                                     <UserDropdown />
                                 </div>
                             </div>

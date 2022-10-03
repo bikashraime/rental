@@ -111,10 +111,12 @@
     border: none;
 }
 
-.navbar-category-dropdown{
+.navbar-category-dropdown {
+    /* border: 1px solid red; */
     position: absolute;
     top: 2.5rem;
 }
+
 
 
 @media(max-width:1010px) {
@@ -129,13 +131,24 @@
         border-radius: 5px;
         position: absolute;
         top: 85.5px;
-        right: 0;
+        right: 0%;
         flex-direction: column;
         height: 90vh;
+        animation: slideLeftAnimation linear 200ms;
     }
 
     .navbar-menu>* {
         margin: 1rem 4rem;
     }
 
+}
+
+@keyframes slideLeftAnimation {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
