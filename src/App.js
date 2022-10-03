@@ -20,52 +20,52 @@ import Navbar1 from './pages/navbar/navbar1.js';
 
 
 function ScrollTop() {
-  const { pathname } = useLocation();
+	const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    // console.log("home window scroll up activated")
-    // console.log(pathname)
-  }, [pathname]);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+		// console.log("home window scroll up activated")
+		// console.log(pathname)
+	}, [pathname]);
 
-  return null;
+	return null;
 }
 
 const App = () => {
-  const Params = useParams();
+	const Params = useParams();
 
-  return (
-    <div className='main'>
-      <Topbar />
-      <BrowserRouter className="main">
-        <Navbar1 />
-        {/* <div style={{height:'2rem'}}></div>
+	return (
+		<div className='main'>
+			<Topbar />
+			<BrowserRouter className="main">
+				<Navbar1 />
+				{/* <div style={{height:'2rem'}}></div>
         <NavigationBar /> */}
-        <ScrollTop />
+				<ScrollTop />
 
-        <div className='expanded'>
-          <Routes  >
-            <Route path="/" element={<HomePage />} />
-            <Route path='/profile' element={<Profile />}></Route>
-            <Route path='/setting' element={<Setting />}></Route>
-            <Route exact path="/detail/:id/" element={<DetailPage />} />
-            <Route exact path='/aboutus' element={<AboutUs />} />
-            <Route path='/viewall'>
-              <Route path='room' element={<ViewAll title='Room' />} />
-              <Route path='apartment' element={<ViewAll title='Flats & Apartments' />} />
-              <Route path='house' element={<ViewAll title='House' />} />
-            </Route>
-            <Route exact path="/signup" element={<Signup />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-          <ScrollToTop className="scrollToTop" smooth color='#fff' />
-        </div>
+				<div className='expanded'>
+					<Routes  >
+						<Route path="/" element={<HomePage />} />
+						<Route path='/profile' element={<Profile />}></Route>
+						<Route path='/setting' element={<Setting />}></Route>
+						<Route exact path="/detail/:id/" element={<DetailPage />} />
+						<Route exact path='/aboutus' element={<AboutUs />} />
+						<Route path='/viewall'>
+							<Route path='room' element={<ViewAll title='Room' />} />
+							<Route path='apartment' element={<ViewAll title='Flats & Apartments' />} />
+							<Route path='house' element={<ViewAll title='House' />} />
+						</Route>
+						<Route exact path="/signup" element={<Signup />} />
+						<Route path="*" element={<NotFoundPage />} />
+					</Routes>
+					<ScrollToTop className="scrollToTop" smooth color='#fff' />
+				</div>
 
-        <Footer />
+				<Footer />
 
-      </BrowserRouter>
-    </div>
-  );
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

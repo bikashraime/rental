@@ -9,7 +9,7 @@ export default function ViewAll(props) {
     //for grid view
     let items = []
     for (let i = 0; i < 30; i++) {
-        items.push(<RentalCard />)
+        items.push(<RentalCard  />)
     }
 
     function Items({ currentItems }) {

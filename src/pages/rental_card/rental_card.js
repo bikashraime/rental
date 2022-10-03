@@ -74,8 +74,9 @@ export const RentalCard = (props) => {
 
     return (
         <>
-            <DeleteModal showModal={showModal} setShowModal={setShowModal}/>
             <div className="rental-card">
+                <DeleteModal showModal={showModal} setShowModal={setShowModal} />
+
                 <img className="rental-image" src={data.img} height={205} alt="Image" />
                 <div className="rental-card-detail">
                     <div className="rental-text-id">
@@ -84,7 +85,7 @@ export const RentalCard = (props) => {
                         </span>
                         <span style={admin ? { display: 'block' } : { display: 'none' }} >
                             <i class="fa-solid fa-ellipsis-vertical" style={{ padding: '0 .5rem', marginRight: '.5rem' }} title="Edit"></i>
-                            <i onClick={()=>setShowModal(true)} id="rental-card-delete" class="fa-solid fa-trash" title="Delete Ad"></i>
+                            <i onClick={() => setShowModal(true)} id="rental-card-delete" class="fa-solid fa-trash" title="Delete Ad"></i>
                         </span>
                     </div>
                     <div className="rental-text-title">{data.intro}</div>

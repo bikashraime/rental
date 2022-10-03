@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import DeletePopup from './delete_popup/delete_popup';
 import Test from './pages/test_page/test';
 import reportWebVitals from './reportWebVitals';
 
