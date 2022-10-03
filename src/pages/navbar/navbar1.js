@@ -7,6 +7,7 @@ import { HashLink } from 'react-router-hash-link'
 import UserDropdown from '../user_dropdown/user_dropdown'
 import { findAllByTestId } from '@testing-library/react'
 import { useEffect, useRef } from 'react'
+import CategoryDropdown from './category_dropdown/category_dropdown'
 
 export default function Navbar1() {
 
@@ -30,14 +31,24 @@ export default function Navbar1() {
         console.log(window.innerWidth)
         document.addEventListener('click', handleClickOutsideNavbarUser, true)
         document.addEventListener('click', handleClickOutside, true)
+        document.addEventListener('click', handleClickOutsideCategory, true)
 
     })
 
-    //Outside click handle for minimized menu
+    //Overlay click handle for minimized menu
     const refOne = useRef(null)
     const handleClickOutside = (e) => {
         if (!refOne.current.contains(e.target) && window.innerWidth < 1010) {
             setMenu(false)
+        }
+    }
+
+    //Category dropdwon toggle
+    const [categoryDropdown, setCategoryDropdown] = useState(false)
+    const refThree = useRef(null)
+    const handleClickOutsideCategory = (e) => {
+        if (!refThree.current.contains(e.target)) {
+            setCategoryDropdown(false)
         }
     }
 
@@ -76,14 +87,22 @@ export default function Navbar1() {
 
                         <div ref={refOne} onClick={() => widthResponse()} className="navbar-menu" style={menu ? { display: 'flex' } : { display: 'none' }}>
                             <Link to='/' className='navbar-home'>HOME</Link>
+                            <div ref={refThree} style={{ position: 'relative' }} >
+                                <button onClick={() => setCategoryDropdown(!categoryDropdown)} className='navbar-home'>CATEGORY</button>
+                                <div className='navbar-category-dropdown' style={categoryDropdown ? { display: 'block' } : { display: 'none' }} onClick={() => setCategoryDropdown(false)}>
+                                    <CategoryDropdown />
+                                </div>
+
+                            </div>
                             <Link to='/aboutus' className='navbar-home '>ABOUT US</Link>
                             <HashLink to='/#contact' className='navbar-home ' >CONTACT US</HashLink>
-                            <button className='navbar-postad ' >Post Ad</button>
                         </div>
 
 
                         <div className='navbar-non-minimize'>
                             <Link to='/signup' className='navbar-signup' style={!loggedin ? { display: 'inherit' } : { display: 'none' }}>Signup / Login</Link>
+
+                            <button className='navbar-postad ' style={loggedin ? { display: 'inherit' } : { display: 'none' }}>Post Ad</button>
                             <div ref={refTwo} className='navbar-user' style={loggedin ? { display: 'inherit' } : { display: 'none' }}>
                                 <button className='navbar-user-button' onClick={handleClickOnNavbarUser} >
                                     <div className="navbar-user-icon">
@@ -91,7 +110,7 @@ export default function Navbar1() {
                                     </div>
                                     <div className='navbar-user-name'>User</div>
                                 </button>
-                                <div onClick={()=>setNavbarUser(false)} className='navbar-user-dropdown' style={{ display: navbarUser ? 'block' : 'none' }}>
+                                <div onClick={() => setNavbarUser(false)} className='navbar-user-dropdown' style={{ display: navbarUser ? 'block' : 'none' }}>
                                     <UserDropdown />
                                 </div>
                             </div>

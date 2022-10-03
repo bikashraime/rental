@@ -28,8 +28,8 @@ function UserDropdown() {
                     </div>
                     <span>About Us</span>
                     <i class="fa-sharp fa-solid fa-angle-right fa-lg"></i>
-                </Link> */}
-                {/* <HashLink to='/#contact' className="user-dropdown-menu link-css-remover">
+                </Link>
+                <HashLink to='/#contact' className="user-dropdown-menu link-css-remover">
                     <div className="user-dropdown-icon">
                         <i class="fa-solid fa-envelope fa-xl"></i>
                     </div>
