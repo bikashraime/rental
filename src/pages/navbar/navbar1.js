@@ -18,6 +18,7 @@ export default function Navbar1() {
         setMenu(!menu);
     }
     const widthResponse = () => {
+        console.log("Width response is running")
         if (window.innerWidth > 1010) {
             setMenu(true)
             return
@@ -94,14 +95,12 @@ export default function Navbar1() {
                 <div>
                     <div className="container navbar-content">
                         <Link to='/'><img src={logo} className='navbar-content-logo' /></Link>
-                        <div ref={refOne} onClick={() => widthResponse()} className="navbar-menu" style={menu ? { display: 'flex' } : { display: 'none' }}>
-                            <Link to='/' className='navbar-home'>HOME</Link>
 
 
 
 
-
-
+                        <div ref={refOne} className="navbar-menu" style={menu ? { display: 'flex' } : { display: 'none' }}>
+                            <Link to='/' className='navbar-home'  onClick={() => widthResponse()}>HOME</Link>
                             <div ref={refThree} style={{ position: 'relative' }} >
                                 <button onClick={() => setCategoryDropdown(!categoryDropdown)} className='navbar-home'>CATEGORY</button>
                                 <div
@@ -109,19 +108,17 @@ export default function Navbar1() {
                                     style={categoryDropdown ? { display: 'block' } : { display: 'none' }}
                                     onClick={() => setCategoryDropdown(false)}
                                 >
-                                    <CategoryDropdown />
+                                    <CategoryDropdown  handleMenu={widthResponse}/>
                                 </div>
                             </div>
-
-
-
-
-
-
-
-                            <Link to='/aboutus' className='navbar-home '>ABOUT US</Link>
-                            <HashLink to='/#contact' className='navbar-home ' >CONTACT US</HashLink>
+                            <Link to='/aboutus' className='navbar-home'  onClick={() => widthResponse()}>ABOUT US</Link>
+                            <HashLink to='/#contact' className='navbar-home '  onClick={() => widthResponse()}>CONTACT US</HashLink>
                         </div>
+
+
+
+
+
                         <div className='navbar-non-minimize'>
                             <Link to='/signup' className='navbar-signup' style={!loggedin ? { display: 'inherit' } : { display: 'none' }}>Signup / Login</Link>
                             <button className='navbar-postad ' style={loggedin ? { display: 'inherit' } : { display: 'none' }} onClick={toasting}>Post Ad</button>
@@ -133,7 +130,7 @@ export default function Navbar1() {
                                     <div className='navbar-user-name'>User</div>
                                 </button>
                                 <div onClick={() => setNavbarUser(false)} className='navbar-user-dropdown slideDown' style={{ display: navbarUser ? 'block' : 'none' }}>
-                                    <UserDropdown />
+                                    <UserDropdown/>
                                 </div>
                             </div>
                             <button className='navbar-bar' onClick={toggleMenu}><i class="fa-solid fa-bars fa-2x"></i></button>

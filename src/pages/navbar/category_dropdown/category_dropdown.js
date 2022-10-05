@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './category_dropdown.css'
 
 
-export default function CategoryDropdown() {
+export default function CategoryDropdown({handleMenu}) {
     let lists = [
         ['ROOM', <i class="fa-solid fa-person-shelter"></i>, '/viewall/room', 'key1'],
         ['APARTMENT', <i class="fa-solid fa-bed"></i>, '/viewall/apartment', 'key2'],
@@ -19,7 +19,7 @@ export default function CategoryDropdown() {
 
     for (let item of lists) {
         list_jsx.push(
-            <div key={item[3]} className='category-dropdown-component'>
+            <div key={item[3]} className='category-dropdown-component' onClick={handleMenu}>
                 <NavLink to={item[2]} className='category-dropdown-navlink'>
                     <div style={{ marginRight: '.4rem' }}>{item[1]}</div>
                     <div>{item[0]}</div>
